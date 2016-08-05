@@ -1,4 +1,5 @@
 Web Update Request System
+
 The OSMRE web team was struggling both to track the work we were doing and to share the responsibility of updating all the sites. As a regulatory agency, it is important that OSMRE keeps information on public-facing websites current so as to be in compliance with SMCRA (Surface Mining Coal and Reclamation Act). 
 
 Each region had a different method of receiving web update requests and there wasn’t visibility into the process. Fellow employees who were requesting updates were frustrated because correspondence was inconsistent and deadlines were easily missed.
@@ -26,11 +27,12 @@ Many of the employees were accustomed to using SharePoint to submit web requests
 Eventually, the tool was comprehensive enough to be used as the first version of a universal web request submission system. I taught the remaining web developers how to maintain the new system before I left to join Code for America as a 2016 fellow.
 
 Skills Used:
-- Visual Design
-- SharePoint Development
-- User Research
-- User Testing
+- UX
+- - Conducting user interviews
+- - Conducting user testing
 - Information architecture
+- Visual design
+- SharePoint development
 
 Tools used:
 - Adobe InDesign
