@@ -1,0 +1,77 @@
+<<<<<<< HEAD
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Stephanie Cain's Online Portfolio</title>
+  <meta name="description" content="Stephanie Cain's Online Portfolio">
+  <meta name="author" content="Stephanie Cain">
+
+  <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+<script>
+function revealProjects(val) {
+    $(".project").hide();
+    $("[data-job='" + val + "']").show();
+}
+</script>
+<form>
+  <input type="radio" name="job" value="all" checked onchange="revealProjects(this.value)"> Show all<br>
+  <input type="radio" name="job" value="CfA" onchange="revealProjects(this.value)"> Code for America<br>
+  <input type="radio" name="job" value="OSMRE" onchange="revealProjects(this.value)"> Office of Surface Mining Reclamation and Enforcement<br>
+  <input type="radio" name="job" value="other" onchange="revealProjects(this.value)"> Other
+</form>
+<div class="project" id="workforwardNOLA" data-job="CfA" data-skills="research UX webDesign frontEnd content">
+  <h3>Work Forward NOLA</h3>
+  <p>Understanding the complexities of the workforce system at a local level in New Orleans as well as at the State and National level was one of our biggest challenges. Because the system is difficult to navigate, many job seekers drop off when they become unsure of their next steps.</p>
+  <p>Job seekers are more successful when they work with someone who is able to connect them to necessary resources and guide them towards a career. We chose to create a tool that would engage more people to come to a job center and better prepare them in advance of their visit.</p>
+  <p>The information available online for the various job centers in New Orleans was sparse and spread across websites. If someone had a question or was unsure what to do, they could not find information without visiting a center.</p>
+  <p>After a small print test (see One-Pager), we chose to build a mobile-first website that compiled information about each job center in one place. It also encouraged signing up for LAWorks in advance of a visit.</p>
+  <p>We hoped that by better preparing someone before they went in, they would be able to spend more quality time with their career coach.</p>
+</div>
+<div class="project" id="postingPro" data-job="OSMRE" data-skills="research UX webDesign frontEnd">
+  <h3>PostingPro</h3>
+  <p>A couple days after being placed on the New Orleans team, we began building an online tool that would identify bias in job postings. The initial iteration was built upon two open-source libraries. The first flagged words based on three categories of unconscious bias, and the second determined the equivalent grade reading level for a block of text.<p>
+  <p>As we tested the tool, we frequently found that job postings were written at a higher reading level than the job itself required. For instance, a position that required a high school degree was written at a 14th grade level (equivalent to sophomore year in college). By using complex language in a job posting, a hiring manager might be preventing a large number of qualified people from applying. This could perpetuate the hiring of over-skilled workers who are more likely to leave the position after a short period of time.</p>
+  <p>Over the next couple months we continued to refine and test the tool with hiring managers and HR representatives. Although we found that the tool added value, we needed to better understand the hiring process so that we could integrate the tool without adding extra work.</p>
+</div>
+<div class="project" id="personalPortfolio" data-job="other" data-skills="drawing webDesign frontEnd content">
+  <h3>Personal Portfolio</h3>
+  <p>I am redesigning my portfolio and will update this section as I progress.<p>
+
+  <h4>Research and Brainstorming</h4>
+  <p>I’d like to create something that tells a story about who I am as a designer and individual.</p>
+  <p>The beginning of my design process always begins with research. In this instance, it involved self-reflection on who I am and what I’ve accomplished. A UX designer lead me in an exercise called Branding Deck so that I could build a semantic word list of my personal brand. I used Pinterest, Niice and Google Images to look for visual representations of the words and began to organize them into a map.</p>
+  <p>This helped me narrow my focus and develop a message that I would share throughout my portfolio.</p>
+
+  <h4>Outline</h4>
+  <p>I looked at the work I’ve completed and began to curate based on how it supported my personal brand and story. I decided to develop content for each piece and compiled an outline to create a cohesive flow from one project to the next.</p>
+  <p>I don’t envision that every prospective client or employer will read through every piece in its entirety. By writing a description of each project in detail, I will improve my personal brand communication in general and reflect on what I’ve accomplished.</p>
+
+  <h4>Content Creation</h4>
+  <p>Now I am in the process of generating content for each project.</p>
+</div>
+<div class="project" id="SPRPosters" data-job="OSMRE" data-skills="research drawing printDesign content">
+  <h3>SPR Posters</h3>
+  <p>OSMRE (Office of Surface Mining Reclamation and Enforcement) was working to protect streams near mining operations, and needed new visual designs to raise awareness of key issues. The graphics team was asked to create seven posters that would be used as educational tools during public meetings for the Stream Protection Rule.</p>
+  <p>I managed development for three of the posters: Protection of Hydrologic Balance, Revegetation, Soil and Fish and Wildlife Protection and Coal Regions. I worked with a policy expert in each area who ensured that the design accurately represented the new regulations.</p>
+  <p>I started by interviewing and learning from the experts and then asked them to sketch their ideas. I refined the sketches, gathered more feedback and began building in Illustrator. I worked closely with members of OSMRE’s graphics team to ensure a cohesive brand across the different designs. We would occasionally swap files to improve details. After managing several rounds of approval, the designs were ready for print.</p>
+</div>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stephanie Cain's Portfolio</title>
+</head>
+<body>
+<!--#echo var="DATE_LOCAL" -->
+<!--#include file="includes/AML-video.txt" -->
+>>>>>>> origin/master
+</body>
+</html>
