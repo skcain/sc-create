@@ -1,4 +1,6 @@
 function revealProjects(val) {
     $(".project").hide();
-    $("[data-job='" + val + "']").show();
+    if (val == "all") {
+      $(".project").show();
+    } else { $("[data-job='" + val + "']").show(); }
 }

@@ -1,12 +1,22 @@
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+  clear: both; }
+
+html {
+  font-size: 62.5%; }
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "Source Sans Pro"; }
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.6rem;
+  text-align: left; }
 
 form {
   padding: 1rem; }
 
 .project {
-  display: none; }
+  padding: 1rem; }
 
 /*# sourceMappingURL=main.css.map */
