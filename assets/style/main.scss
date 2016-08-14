@@ -19,11 +19,13 @@ body {
   font-size: 1.6rem;
   text-align: left;
 }
-
+header, section { padding: 2rem; }
 
 // Common Elements //
-form { padding: 1rem; }
+form {
+  float: left;
+  margin: 0 1rem;
+}
 
 
 // Projects //
-.project { padding: 1rem; }
