@@ -13,10 +13,11 @@ body {
   font-size: 1.6rem;
   text-align: left; }
 
-form {
-  padding: 1rem; }
+header, section {
+  padding: 2rem; }
 
-.project {
-  padding: 1rem; }
+form {
+  float: left;
+  margin: 0 1rem; }
 
 /*# sourceMappingURL=main.css.map */
