@@ -20,4 +20,7 @@ form {
   float: left;
   margin: 0 1rem; }
 
+#profilePic {
+  max-width: 200px; }
+
 /*# sourceMappingURL=main.css.map */
