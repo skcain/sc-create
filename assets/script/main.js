@@ -10,3 +10,10 @@ function sortJob(val) {
       $(".project").show();
     } else { $("[data-job='" + val + "']").show(); }
 }
+function menuToggle(e){
+  var menuToggle = $("#js-centered-navigation-mobile-menu");
+  $("#js-centered-navigation-menu").toggleClass("show");
+}
+$(window).on("load resize",function(e) {
+  $("#js-centered-navigation-menu").removeClass("show");
+});

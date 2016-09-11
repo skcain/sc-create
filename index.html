@@ -11,11 +11,23 @@
   <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
   <script src ="assets/script/main.js"></script>
 
-  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200italic,300,300italic,400,400italic,600,600italic,700,700italic,900,900italic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200italic,300,300italic,400,400italic,600,600italic,700,700italic,900,900italic" rel="stylesheet">
   <link rel="stylesheet" href="assets/style/main.css">
 </head>
 
 <body>
+  <div class="centered-navigation" role="banner">
+    <div class="centered-navigation-wrapper">
+      <nav role="navigation">
+        <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
+          <li class="nav-link"><a href="javascript:void(0)" title="Home Page">Home</a></li>
+          <li class="nav-link"><a href="javascript:void(0)" title="Resume">Resume</a></li>
+          <li class="nav-link"><a href="javascript:void(0)" title="Contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu" onclick="menuToggle()">Open/Close Menu</a>
+    </div>
+  </div>
   <header>
     <img id="profilePic" src="assets/images/scProfile.jpg" alt="Stephanie Cain's profile picture"/>
     <h1>My name is Stephanie Cain. I am a web designer and I love solving puzzles.</h1>

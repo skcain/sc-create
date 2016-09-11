@@ -1,6 +1,13 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
 // Variables //
 $sans-serif: 'Source Sans Pro', sans-serif;
-
+$dark-gray: #333 !default;
+$large-screen: 53.75em !default;
+$base-font-color: $dark-gray !default;
+$white: #ffffff;
+$action-color: #CC3B6A;
 
 // Design Elements //
 .clearfix {
@@ -18,8 +25,107 @@ body {
   font-family: $sans-serif;
   font-size: 1.6rem;
   text-align: left;
+  color: $base-font-color;
 }
-header, section { padding: 2rem; }
+section { padding: 2rem; }
+header {
+  height: 280px;
+  background: url("../images/hexagons.png") no-repeat center bottom;
+  background-size: cover;
+  background-clip: content-box;
+}
+
+
+// Nav //
+.centered-navigation {
+  $centered-navigation-padding: 1em;
+  $centered-navigation-background: $white;
+  $centered-navigation-height: 60px;
+  $centered-navigation-item-padding: 1em;
+  $centered-navigation-item-nudge: 2.2em;
+  $horizontal-bar-mode: $large-screen;
+
+  background-color: $centered-navigation-background;
+  border-bottom: 1px solid $action-color;
+  min-height: $centered-navigation-height;
+  width: 100%;
+  z-index: 9999;
+
+  // Mobile view
+
+  .centered-navigation-mobile-menu {
+    color: $action-color;
+    display: block;
+    line-height: $centered-navigation-height;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+
+    @include media ($horizontal-bar-mode) { display: none; }
+    &:focus, &:hover { color: $base-font-color; }
+  }
+
+  // Nav menu
+
+  .centered-navigation-wrapper {
+    @include outer-container;
+    @include clearfix;
+    position: relative;
+    z-index: 999;
+  }
+
+  ul.centered-navigation-menu {
+    clear: both;
+    display: none;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0;
+    -webkit-transform-style: preserve-3d; // stop webkit flicker
+    width: 100%;
+    z-index: 99999;
+
+    &.show { display: block; }
+
+    @include media ($horizontal-bar-mode) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  // The nav items
+  ul li.nav-link {
+    background: $centered-navigation-background;
+    display: block;
+    line-height: $centered-navigation-height;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+
+    @include media ($horizontal-bar-mode) {
+      border-right: 1px solid $action-color;
+      &:last-of-type { border-right: 0; }
+    }
+    a {
+      color: $action-color;
+      display: inline-block;
+      outline: none;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:focus, &:hover { color: $base-font-color; }
+    }
+
+    @include media($horizontal-bar-mode) {
+      background: transparent;
+      display: inline;
+      line-height: $centered-navigation-height;
+
+      a { padding: 0 $centered-navigation-item-nudge; }
+    }
+  }
+}
+
 
 // Common Elements //
 form {
