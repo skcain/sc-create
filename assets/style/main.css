@@ -24,17 +24,31 @@ section {
   padding: 2rem; }
 
 header {
-  height: 280px;
+  height: 300px;
   background: url("../images/hexagons.png") no-repeat center bottom;
   background-size: cover;
-  background-clip: content-box; }
+  background-clip: content-box;
+  margin-top: 30px; }
+  header h1 {
+    max-width: 380px;
+    margin: .5em auto; }
+
+h1, h2, h3, h4 {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #799299;
+  text-align: center; }
+
+h1 {
+  font-weight: normal; }
 
 .centered-navigation {
   background-color: #ffffff;
   border-bottom: 1px solid #CC3B6A;
   min-height: 60px;
   width: 100%;
-  z-index: 9999; }
+  z-index: 9999;
+  position: fixed;
+  top: 0; }
   .centered-navigation .centered-navigation-mobile-menu {
     color: #CC3B6A;
     display: block;
@@ -110,6 +124,9 @@ form {
   margin: 0 1rem; }
 
 #profilePic {
-  max-width: 200px; }
+  max-width: 100px;
+  margin: 0 auto;
+  display: block;
+  padding-top: 5.8em; }
 
 /*# sourceMappingURL=main.css.map */
