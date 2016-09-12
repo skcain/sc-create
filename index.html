@@ -11,35 +11,45 @@
   <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
   <script src ="assets/script/main.js"></script>
 
-  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200italic,300,300italic,400,400italic,600,600italic,700,700italic,900,900italic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200italic,300,300italic,400,400italic,600,600italic,700,700italic,900,900italic" rel="stylesheet">
   <link rel="stylesheet" href="assets/style/main.css">
 </head>
 
 <body>
-  <header>
-    <img id="profilePic" src="assets/images/scProfile.jpg" alt="Stephanie Cain's profile picture"/>
-    <h1>My name is Stephanie Cain. I am a web designer and I love solving puzzles.</h1>
-    <p>I am working as a 2016 fellow at Code for America tackling economic development issues. My team is partnering with the City of New Orleans to develop tools to connect job seekers, training providers, and employers in the workforce system.</p>
-  </header>
-  <section id="projects">
-    <div class="sortBy">
-      <form>
-        <input type="radio" name="job" value="all" checked onchange="sortJob(this.value)"> Show all<br>
-        <input type="radio" name="job" value="CfA" onchange="sortJob(this.value)"> Code for America<br>
-        <input type="radio" name="job" value="OSMRE" onchange="sortJob(this.value)"> Office of Surface Mining Reclamation and Enforcement<br>
-        <input type="radio" name="job" value="other" onchange="sortJob(this.value)"> Other
-      </form>
-      <form>
-        <input type="radio" name="type" value="all" checked onchange="sortType(this.value)"> Show all<br>
-        <input type="radio" name="type" value="web" onchange="sortType(this.value)"> Web<br>
-        <input type="radio" name="type" value="print" onchange="sortType(this.value)"> Print<br>
-        <input type="radio" name="type" value="branding" onchange="sortType(this.value)"> Branding<br>
-        <input type="radio" name="type" value="photo" onchange="sortType(this.value)"> Photography<br>
-        <input type="radio" name="type" value="video" onchange="sortType(this.value)"> Videography
-      </form>
-      <div class="clearfix"></div>
+  <div class="centered-navigation" role="banner">
+    <div class="centered-navigation-wrapper">
+      <nav role="navigation">
+        <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
+          <li class="nav-link"><a href="javascript:void(0)" title="Home Page">Home</a></li>
+          <li class="nav-link"><a href="javascript:void(0)" title="Resume">Resume</a></li>
+          <li class="nav-link"><a href="javascript:void(0)" title="Contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="javascript:void(0)" id="nav-open" class="centered-navigation-mobile-menu" onclick="menuToggle()">Open Menu</a>
+      <a href="javascript:void(0)" id="nav-close" class="centered-navigation-mobile-menu" onclick="menuToggle()">Close Menu</a>
     </div>
-    <div class="project" id="workforwardNOLA" data-job="CfA" data-type="web">
+  </div>
+  <div class="hexBG"></div>
+  <header>
+    <img id="profilePic" src="assets/images/scProfile.png" alt="Stephanie Cain's profile picture"/>
+    <h1>My name is Stephanie Cain.<br>I am a product designer and I<br> develop user focused civic technology.</h1>
+    <div class="social-media">
+      <ul>
+        <li class="activeHex"><a href="https://www.linkedin.com/in/skcain" target="_blank" title="Stephanie Cain's LinkedIn"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+</a></li>
+        <li>&nbsp;</li>
+        <li class="activeHex"><a href="https://github.com/skcain" target="_blank" title="Stephanie Cain's Github"><i class="fa fa-github-square" aria-hidden="true"></i>
+</a></li>
+        <li>&nbsp;</li>
+        <li class="activeHex"><a href="https://twitter.com/sc_create" target="_blank" title="Stephanie Cain's Twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i>
+</a></li>
+      </ul>
+    </div>
+    <p>My experience in the public sector has equipped me with expertise in government design, user engagement and workforce. I enjoy building relationships with people and creating growth opportunties for under-served communities.</p>
+  </header>
+  <section id="recentProjects">
+    <h2>Recent Projects</h2>
+    <div class="project" id="workforwardNOLA">
       <h3>Work Forward NOLA</h3>
       <h4>Code for America</h4>
       <p>Understanding the complexities of the workforce system at a local level in New Orleans as well as at the State and National level was one of our biggest challenges. The system is difficult to navigate and many job seekers drop off when they become unsure of their next steps.</p>
@@ -47,81 +57,17 @@
       <p>The information available online for the various job centers in New Orleans was sparse and spread across websites. If someone had a question or was unsure what to do, they could not find information without visiting a center.</p>
       <p>After a small print test (see One-Pager), we chose to build a mobile-first website that compiled information about each job center in one place. It also encouraged signing up for LAWorks in advance of a visit.</p>
       <p>We hoped that by better preparing someone before they went in, they would be able to spend more quality time with their career coach.</p>
-
-      <h4>Skills used</h4>
-      <ul>
-        <li>Subject matter research</li>
-        <li>UX
-          <ul>
-            <li>Conducting user interviews</li>
-            <li>Conducting user testing</li>
-            <li>Compiling and sharing findings with broader team</li>
-          </ul>
-        </li>
-        <li>Moderating design sprints</li>
-        <li>Agile design</li>
-        <li>Collaborative design</li>
-        <li>Visual design - Web</li>
-        <li>Wire-framing</li>
-        <li>Agile development</li>
-        <li>Front-end development</li>
-        <li>Content development</li>
-        <li>Information architecture</li>
-        <li>Stakeholder management</li>
-        <li>Community Outreach</li>
-      </ul>
-      <h4>Tools used</h4>
-      <ul>
-        <li>Usertesting.com</li>
-        <li>Balsamiq</li>
-        <li>Adobe Illustrator</li>
-        <li>InVision</li>
-        <li>GitHub</li>
-        <li>Atom</li>
-        <li>SASS frameworks: Bourbon, Neat, Bitters, Refils</li>
-      </ul>
     </div>
 
-    <div class="project" id="postingPro" data-job="CfA" data-type="web">
+    <div class="project" id="postingPro">
       <h3>PostingPro</h3>
       <h4>Code for America</h4>
       <p>A couple days after being placed on the New Orleans team, we began building an online tool that would identify bias in job postings. The initial iteration was built upon two open-source libraries. The first flagged words based on three categories of unconscious bias, and the second determined the equivalent grade reading level for a block of text.</p>
       <p>As we tested the tool, we frequently found that job postings were written at a higher reading level than the job itself required. For instance, a position that required a high school degree was written at a 14th grade level (equivalent to sophomore year in college). By using complex language in a job posting, a hiring manager might be preventing a large number of qualified people from applying. This could perpetuate the hiring of over-skilled workers who are more likely to leave the position after a short period of time.</p>
       <p>Over the next couple months we continued to refine and test the tool with hiring managers and HR representatives. Although we found that the tool added value, we needed to better understand the hiring process so that we could integrate the tool without adding extra work.</p>
-
-      <h4>Skills used</h4>
-      <ul>
-        <li>Subject matter research</li>
-        <li>UX
-          <ul>
-            <li>Conducting user interviews</li>
-            <li>Conducting user testing</li>
-            <li>Compiling and sharing findings with broader team</li>
-          </ul>
-        </li>
-        <li>Moderating design sprints</li>
-        <li>Agile design</li>
-        <li>Collaborative design</li>
-        <li>Visual design - Web</li>
-        <li>Wire-framing</li>
-        <li>Agile development</li>
-        <li>Front-end development</li>
-        <li>Information architecture</li>
-        <li>Stakeholder management</li>
-      </ul>
-      <h4>Tools used</h4>
-      <ul>
-        <li>Balsamiq</li>
-        <li>Sketch</li>
-        <li>Adobe Illustrator</li>
-        <li>InVision</li>
-        <li>GitHub</li>
-        <li>Atom</li>
-        <li>SASS frameworks: Bourbon, Neat, Bitters, Refils</li>
-      </ul>
     </div>
 
-    <div class="project" id="personalPortfolio" data-job="other" data-type="web">
+    <div class="project" id="personalPortfolio">
       <h3>Personal Portfolio</h3>
       <p>I am redesigning my portfolio and will update this section as I progress.</p>
 
@@ -137,346 +83,6 @@
       <h4>Content Creation</h4>
       <p>I began by writing about a few key pieces of work and asking for feedback from close friends and family. For each project, I identified the skill and tools used. In the future, I’d like to be able to create custom portfolios where I can quickly pull together pieces that highlight different skills. As I build the content into a website, I will custom-tag each piece so that I can easily sort them later.</p>
       <p>Although I am still working on editing the content describing my work, I’ve  begun to develop the structure.</p>
-
-      <h4>Skills used</h4>
-      <ul>
-        <li>Drawing</li>
-        <li>Visual design - Web</li>
-        <li>Wire-framing</li>
-        <li>Front-end development</li>
-        <li>Content development</li>
-        <li>Information architecture</li>
-      </ul>
-      <h4>Tools used</h4>
-      <ul>
-        <li>Adobe Illustrator</li>
-        <li>GitHub</li>
-        <li>Atom</li>
-      </ul>
-    </div>
-
-    <div class="project" id="onePager" data-job="CfA" data-type="print">
-      <p>At the beginning of our fellowship in New Orleans, we learned of a one-pager that provided information about services at Opportunity Centers. It was the only marketing material used and was often overlooked by job seekers. I re-designed the one-pager for the city and wrote a blog-post about my process for the Code for America website.</p>
-      <h3>How to design user-focused information</h3>
-      <p>The process of looking for a job can be isolating and daunting for anyone. Add additional barriers such as previous incarceration, low literacy, or inability to use a computer, and the search becomes nearly impossible. In New Orleans, job seekers can find supportive resources no matter their barriers at any of five Opportunity Centers.</p>
-      <p>Opportunity Centers receive clients through word of mouth and by recommendation of an Outreach Partner (an affiliated group that is embedded in the community). Unfortunately, there is a lack of trust between Opportunity Centers and Outreach Partners, resulting in low numbers of job seekers entering the system.</p>
-      <p>We wanted to test whether improving the communications about Opportunity Centers would result in more job seekers utilizing the services offered. We chose to re-design a one-pager that described each of the Opportunity Centers and was displayed at libraries, YMCAs, and other locations throughout the city.</p>
-
-      <h4>Approach and results</h4>
-      <h5>Design process</h5>
-
-      <h6>Step one: Analysis</h6>
-      <p><i>Simplify and streamline content</i></p>
-      <p>I analyzed the content and found it to be at a 13th grade reading level, much higher than the average adult’s 7th/8th grade reading level. We needed to make the content more accessible for a larger number of job seekers.</p>
-      <p><i>Describe location of each center</i></p>
-      <p>Job seekers choose which Opportunity Center to visit based on the location of the center, so I prioritized that information.</p>
-      <p><i>Create a strong visual flow</i></p>
-      <p>The information about each Opportunity Center is uniformly sized and arranged to have equal visual weight. The design treats information from each Opportunity Center equally but it is difficult for a reader’s eyes to move smoothly from one part to the next.</p>
-      <p><i>Strong visual design that works in grayscale</i></p>
-      <p>Some Outreach Partners only have access to a black and white printer, so it was important to create a design that would work in grayscale and color.</p>
-      <p><i>Actionable first step</i></p>
-      <p>A job seeker should know exactly what step they need to take to access these resources and work towards employment.</p>
-      <p><i>Request more information</i></p>
-      <p>If a job seeker needed additional information that wasn’t present on the poster, we created a channel for them to find out more.</p>
-
-      <h6>Step two: design small, receive feedback</h6>
-      <p>The poster went through many design changes as I sought out and incorporated feedback from key stakeholders throughout New Orleans.</p>
-      <p>I printed out the different iterations of the poster and taped them to a wall to replicate the way a job seeker would interact with it. By doing this, I was able to identify and resolve readability issues that weren’t as obvious in digital format.</p>
-      <p>As I designed the poster, the team focused on guiding the job seeker through a journey that followed a clear visual line through the poster:</p>
-      <ol>
-        <li>Interest: Bold heading draws job seeker in.
-        <li>Inclusion: Job seeker realizes that services are available to them no matter their barriers and finds additional reason to engage.</li>
-        <li>Important Details: Job seeker is given the location, phone number and specific services for each Opportunity Center. They are also given instructions on what to bring on their first visit.</li>
-        <li>Additional Information: If the job seeker has questions, they are given the ability to engage further through text message. We would answer the text messages individually as they came in so we could better understand the needs and motivations of job seekers.</li>
-      </ol>
-
-      <h6>Step three: put it into practice</h6>
-      <p>The final poster was written at a 6th grade reading level, provided an actionable first step, and a channel for additional communication. We placed the poster at three different Outreach Partner centers with different phone numbers so we would know where people were texting from.</p>
-
-      <h5>Repeat our process</h5>
-      <p>You can do this too! Here are a few tips to help improve information that you’re sharing with the public.</p>
-      <p><i>Focus on the person who will be viewing the content</i></p>
-      <p>Imitate the environment where the information will be displayed. If you are designing a printed poster, make sure to print it out beforehand so that you can visualize what it will look like in its final format.</p>
-      <p>When redesigning a poster, here are a couple questions you can ask yourself,</p>
-      <ul>
-        <li>How much time does this person have to spend engaging with the poster?</li>
-        <li>What is the environment where it will be shared?</li>
-        <li>What’s the one thing they should know after reading the content?</li>
-      </ul>
-
-      <p><i>Simplify content and include a call to action</i></p>
-      <p>As an expert developing content, it’s natural to want to provide as much information as possible to our reader. However, the person viewing the content can easily become overwhelmed by a lot of text. Pair it down as much as possible by focusing on one or two reasons for the reader to engage. Remove anything that does not support those goals.</p>
-      <p>It’s easy to become attached to what we’ve written. This is a great time to request feedback from others. Ask a coworker or the intended audience to look over the poster and give you their thoughts.</p>
-      <p>Finally, there are many tools you can use to determine the reading level of your text, and this is a great way to understand how inclusive the content is. Check your Readability Score at <a href="https://readability-score.com/" target="_blank">https://readability-score.com/</a>.</p>
-
-      <p><i>Visual Flow</i></p>
-      <p>After you’ve created a first draft, print it out and try this exercise: Draw a line through the information from the place where you want a reader to start to the place where you want them to finish. You are not allowed to lift your pen off the paper. If you can’t draw a clear line through the content, it probably has an issue with visual flow. Remember that we generally read from top to bottom and left to right.</p>
-      <p>It’s important that you clearly guide your viewer through the content so that they don’t lose interest or get confused.</p>
-
-      <h4>Skills used</h4>
-      <ul>
-        <li>Subject matter research</li>
-        <li>Visual design - Print</li>
-        <li>Content development</li>
-        <li>Information architecture</li>
-        <li>Stakeholder management</li>
-        <li>Community outreach</li>
-      </ul>
-      <h4>Tools used</h4>
-      <ul>
-        <li>Adobe Illustrator</li>
-      </ul>
-    </div>
-
-    <div class="project" id="SPRPosters" data-job="OSMRE" data-type="print">
-      <h3>SPR Posters</h3>
-      <h4>Office of Surface Mining Reclamation and Enforcement</h4>
-      <p>OSMRE (Office of Surface Mining Reclamation and Enforcement) was working to protect streams near mining operations, and needed new visual designs to raise awareness of key issues. The graphics team was asked to create seven posters that would be used as educational tools during public meetings for the Stream Protection Rule.</p>
-      <p>I managed development for three of the posters: Protection of Hydrologic Balance, Revegetation, Soil and Fish and Wildlife Protection and Coal Regions. I worked with a policy expert in each area who ensured that the design accurately represented the new regulations.</p>
-      <p>I started by interviewing and learning from the experts and then asked them to sketch their ideas. I refined the sketches, gathered more feedback and began building in Illustrator. I worked closely with members of OSMRE’s graphics team to ensure a cohesive brand across the different designs. We would occasionally swap files to improve details. After managing several rounds of approval, the designs were ready for print.</p>
-
-      <h4>Skills used</h4>
-      <ul>
-        <li>Subject matter research</li>
-        <li>Drawing</li>
-        <li>Collaborative design</li>
-        <li>Visual Design - Print</li>
-        <li>Information architecture</li>
-        <li>Stakeholder management</li>
-        <li>Community outreach</li>
-      </ul>
-      <h4>Tools used</h4>
-      <ul>
-        <li>Adobe Illustrator</li>
-      </ul>
-    </div>
-
-    <div class="project" id="employeeIntranet" data-job="OSMRE" data-type="web">
-      <h3>Employee Intranet Re-Design</h3>
-      <h4>Office of Surface Mining Reclamation and Enforcement</h4>
-      <p>The employee intranet at the Office of Surface Mining Reclamation and Enforcement (OSMRE) was an out-of-date list of links that resembled Windows Explorer. This is a common problem across government websites.</p>
-      <p>The web team saw a need for improving this important employee resource and so we began the process of a re-design. I interviewed employees about their current usage of the intranet and found that most people didn’t know it existed. If they were aware of the intranet, they rarely found it useful because the content was out-of-date.</p>
-      <p>Next we created a handful of prototypes and watched employees interact with the designs. After refining them further, we were able to pull the best parts of each into a final prototype and begin building.</p>
-
-      <h4>New Feature: Employee Directory</h4>
-      <p>When there was a change in employees, an updated phone list was printed for each staff person including contact information, position title and managers. A static PDF of OSMRE’s organizational chart accompanied the new phone list. Apart from being redundant, it was difficult to find information about someone who was not located in your immediate office.</p>
-      <p>Many staff members were using an employee directory on OSMRE’s public-facing website to access contact information. I wanted to create a feature on the employee intranet that would function both as a phone chart and an organizational chart. I chose to re-design them both to be based on the same JSON file to reduce the amount of time spent updating the two directories.</p>
-      <p>I created an excel spreadsheet with employee information and then converted to JSON. This way, someone who was not technical could update the excel spreadsheet and replace the JSON file on both the public website and employee intranet.</p>
-      <p>For the design, I created a hierarchical structure where a user could expand each region, branch and division and see the corresponding manager and employees. Clicking on an individual’s name would reveal contact information and a summary of their responsibilities.
-
-      <h4>Skills used</h4>
-      <ul>
-        <li>Subject matter research</li>
-        <li>UX
-          <ul>
-            <li>Conducting user interviews</li>
-            <li>Conducting user testing</li>
-            <li>Compiling and sharing findings with broader team</li>
-          </ul>
-        </li>
-        <li>Visual Design - Web</li>
-        <li>Wire-framing</li>
-        <li>Front-end Development</li>
-        <li>Content development</li>
-        <li>Information architecture</li>
-      </ul>
-      <h4>Tools used</h4>
-      <ul>
-        <li>Adobe Illustrator</li>
-        <li>Adobe Dreamweaver</li>
-        <li>Microsoft Excel</li>
-        <li>CSV - JSON converter</li>
-      </ul>
-    </div>
-
-    <div class="project" id="webUpdateRequest" data-job="OSMRE" data-type="web">
-      <h3>Web Update Request System</h3>
-      <h4>Office of Surface Mining Reclamation and Enforcement</h4>
-      <p>The OSMRE web team was struggling both to track the work we were doing and to share the responsibility of updating all the sites. As a regulatory agency, it is important that OSMRE keeps information on public-facing websites current so as to be in compliance with SMCRA (Surface Mining Coal and Reclamation Act).</p>
-      <p>Each region had a different method of receiving web update requests and there wasn’t visibility into the process. Fellow employees who were requesting updates were frustrated because correspondence was inconsistent and deadlines were easily missed.</p>
-      <p>I designed and created a universal system for all of OSMRE that would allow someone to submit a web update request for any site and have it automatically routed to the correct person on the web team. Any time a request was updated, the requester or developer would be notified with an email. In addition, we were able to collect better data about the average time and number of requests completed so that we could continue to improve the process.</p>
-
-      <h4>User Research</h4>
-      <p>I started by interviewing people who frequently submitted web requests to better understand what was and wasn’t working. I focused on improving the system through a few key areas that came up frequently in those conversations.<p>
-
-      <h4>Creating functional automated workflows</h4>
-      <p>The existing system had workflows that emailed the requester when something changed. However, the workflows were not functioning every time and a requester had to remember to check a website to know whether or not they needed to take action. This caused some requests to be delayed in their completion.</p>
-
-      <h4>Tracking internal communication</h4>
-      <p>When a new web request was submitted, correspondence between the developer and requester happened through a variety of channels. This made it difficult for both to track the requirements and information about the request.</p>
-
-      <h4>Visibility</h4>
-      <p>Requesters often felt frustrated if a task took longer than they expected. Web developers also felt frustrated when they weren’t given enough time to complete a request. Both parties needed more visibility into the other’s workflow.</p>
-
-      <h4>Sketching</h4>
-      <p>After gathering initial research, I sketched out a full journey map of a web request and asked for feedback from both potential requesters and members of the web team. After a couple iterations, I felt confident in the process and begin building a new prototype.</p>
-
-      <h4>Prototype</h4>
-      <p>Many of the employees were accustomed to using SharePoint to submit web requests, so I chose to build upon what was already being used. Throughout the build process, I asked for feedback from key users who frequented the system. I observed them interacting with the system so that I was able to identify barriers in the design. I presented at staff meetings, teaching how to use the tool and recruiting additional feedback.</p>
-
-      <p>Eventually, the tool was comprehensive enough to be used as the first version of a universal web request submission system. I taught the remaining web developers how to maintain the new system before I left to join Code for America as a 2016 fellow.</p>
-
-      <h4>Skills used</h4>
-      <ul>
-        <li>Subject matter research</li>
-        <li>UX</li>
-          <ul>
-            <li>Conducting user interviews</li>
-            <li>Conducting user testing</li>
-            <li>Compiling and sharing findings with broader team</li>
-          </ul>
-        </li>
-        <li>Visual Design - Web</li>
-        <li>Wire-framing</li>
-        <li>SharePoint development</li>
-        <li>Information architecture</li>
-      </ul>
-      <h4>Tools used</h4>
-      <ul>
-        <li>Adobe InDesign</li>
-        <li>Sharepoint Designer</li>
-        <li>InfoPath</li>
-      </ul>
-    </div>
-
-    <div class="project" id="roar" data-job="other" data-type="web">
-      <h3>ROAR!</h3>
-      <p>I was approached to create a website for an upcoming New Orleans band, ROAR! I started with a couple brainstorming sessions to learn what the band mates wanted for a visual brand and overall content of the site. ROAR! had an online presence and the website presented an opportunity to unite the brand on a single page. I created wireframes and design mock-ups to align us on a single direction.</p>
-      <p>Once we had agreed on a design, I began building the site before the band went on tour. A simple version of the site launched in October 2015, and I continue managing new feature development on a rolling basis.</p>
-
-      <h4>Skills used</h4>
-      <ul>
-        <li>Visual Design - Web</li>
-        <li>Wire-framing</li>
-        <li>Front-end development</li>
-        <li>Information architecture</li>
-        <li>Stakeholder management</li>
-      </ul>
-      <h4>Tools used</h4>
-      <ul>
-        <li>Adobe Illustrator</li>
-        <li>Adobe Dreamweaver</li>
-      </ul>
-    </div>
-
-    <div class="project" id="amlVideo" data-job="OSMRE" data-type="video">
-      <h3>Abandoned Mine Land Video</h3>
-      <h4>Office of Surface Mining Reclamation and Enforcement</h4>
-      <p>I was asked to create a video that highlighted the reclamation work being done to fill a dangerous hole left by an abandoned mine an hour outside of Seattle, Washington. The video would be published on OSMRE’s YouTube channel and shared with the DOI (Department of Interior) network.</p>
-      <p>I met with the specialist in charge of the reclamation project to discuss her vision for the video. She gave me an overview of what to expect so that I could begin planning the list of shots that I wanted to capture. Together, we scheduled interviews with relevant people working on the project.</p>
-      <p>I filmed the construction to fill the hole over the course of a week. When I was finished filming, I reviewed the film and readied the footage by cutting it into clips. Next I created a storyboard to build the structure of the content and put the clips in order. Finally, I added captioning to the video and readied it for YouTube.</p>
-
-      <h4>Skills used</h4>
-      <ul>
-        <li>Subject matter research</li>
-        <li>UX
-          <ul>
-            <li>Conducting user interviews</li>
-            <li>Conducting user testing</li>
-            <li>Compiling and sharing findings with broader team</li>
-          </ul>
-        </li>
-        <li>Content development</li>
-        <li>Information architecture</li>
-        <li>Stakeholder management</li>
-        <li>Photography and editing</li>
-        <li>Videography and editing</li>
-      </ul>
-      <h4>Tools used</h4>
-      <ul>
-        <li>Microsoft Office</li>
-        <li>Adobe Photoshop</li>
-        <li>Adobe Premiere</li>
-        <li>Adobe Media Encoder</li>
-      </ul>
-    </div>
-
-    <div class="project" id="AYPLogo" data-job="other" data-type="branding">
-      <h3>Logo for the Affordable Yoga Project</h3>
-      <p>I was asked to create a logo for a new donation-based yoga class. The instructor and I met in person to discuss ideas for the logo, timeframe and the final deliverable. She wanted a logo that was based off a biblical story featuring a hippo and a lotus flower.</p>
-      <p>I began by creating semantic mind maps. This exercise helped me brainstorm different visual representations of the subject matter. Next I sketched out several variations of the logo with pencil and pen, and narrowed down to three to move forward with. I showed the instructor the three logos and she gave feedback that allowed me to further refine into one design. I began to draw the logo digitally using Adobe Illustrator.</p>
-      <p>After another round of feedback, I gave the instructor a series of Illustrator and image files with transparent, white and black backgrounds.</p>
-
-      <h4>Skills used</h4>
-      <ul>
-        <li>Drawing</li>
-        <li>Visual Design - Print</li>
-        <li>Stakeholder management</li>
-      </ul>
-      <h4>Tools used</h4>
-      <ul>
-        <li>Adobe Illustrator</li>
-      </ul>
-    </div>
-
-    <div class="project" id="NHSLogo" data-job="other" data-type="branding">
-      <h3>Logo for North High School swim team</h3>
-      <p>I was asked to create a logo for a local high school swim team that they could use on their swimming suits, caps, and other material. The coach and I met in person to discuss ideas for the logo, timeframe and the final deliverable. He wanted a logo that was based off the school’s mascot and colors but was unique to the swimming team.</p>
-      <p>I began by creating mind maps with related words to the current schools branding. This exercise helped me brainstorm different visual representations of the subject matter. Next I sketched out several variations of the logo with pencil and pen, and narrowed down to three to move forward with. I showed the coach the three logos and he gave feedback that allowed me to further refine into one design. I began to draw the logo digitally by first capturing it with the mobile application, Adobe Capture and then bringing it into Adobe Illustrator.</p>
-      <p>After another round of feedback, I gave the coach a series of Illustrator and image files with transparent, white and black backgrounds.</p>
-
-      <h4>Skills used</h4>
-      <ul>
-        <li>Drawing</li>
-        <li>Visual Design - Print</li>
-        <li>Stakeholder management</li>
-      </ul>
-      <h4>Tools used</h4>
-      <ul>
-        <li>Adobe Illustrator</li>
-      </ul>
-    </div>
-
-    <div class="project" id="HETPoster" data-job="other" data-type="print">
-      <h3>Historic Elitch Theater Poster</h3>
-      <p>I began volunteering with a local neighborhood group for the protection and preservation of the Elitch theater, Carousel pavilion and Theater plaza in Denver, Colorado. The theatre was listed on the National Register of Historic Places in 1978 and was going through renovations.</p>
-      <p>I was asked to design a poster that would be used to market the upcoming summer movies series to be held in the theater plaza. Aside from the required content and logos to be included, I was given free-range to design the poster.</p>
-      <p>I started by prioritizing the information so that I could maintain visual flow throughout the content. I sketched out some layout ideas and then began building in Adobe Illustrator. The poster was professionally printed and hung in various local restaurants and shops.<p>
-
-      <h4>Skills used</h4>
-      <ul>
-        <li>Drawing</li>
-        <li>Visual Design - Print</li>
-        <li>Information architecture</li>
-        <li>Stakeholder management</li>
-      </ul>
-      <h4>Tools used</h4>
-      <ul>
-        <li>Adobe Illustrator</li>
-      </ul>
-    </div>
-
-    <div class="project" id="weddingInvites" data-job="other" data-type="print">
-      <h3>Wedding Invitations</h3>
-      <p>I was asked to create wedding invitations for two weddings. Both couples had the invitations printed themselves.</p>
-
-      <h4>Skills used</h4>
-      <ul>
-        <li>Drawing</li>
-        <li>Visual Design - Print</li>
-        <li>Content development</li>
-        <li>Information architecture</li>
-        <li>Stakeholder management</li>
-      </ul>
-      <h4>Tools used</h4>
-      <ul>
-        <li>Adobe Illustrator</li>
-      </ul>
-    </div>
-
-    <div class="project" id="photography" data-job="other"  data-type="photo">
-      <h3>Photography</h3>
-      <p>I was asked to take photos of a local artist for use in future marketing material. I was also asked to take photos for a friends wedding rehearsal dinner.</p>
-
-      <h4>Skills used</h4>
-      <ul>
-        <li>Stakeholder management</li>
-        <li>Photography and editing</li>
-      </ul>
-      <h4>Tools used</h4>
-      <ul>
-        <li>Adobe Photoshop</li>
-      </ul>
     </div>
   </section>
 </body>

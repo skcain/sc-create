@@ -1,5 +1,16 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "font-awesome";
+
 // Variables //
-$sans-serif: 'Source Sans Pro', sans-serif;
+$header-copy: 'Source Sans Pro', sans-serif;
+$body-copy: 'Source Sans Pro', sans-serif;
+$dark-gray: #333 !default;
+$large-screen: 53.75em !default;
+$base-font-color: $dark-gray !default;
+$white: #ffffff;
+$action-color: #CC3B6A;
+$accent-color: #799299;
 
 
 // Design Elements //
@@ -15,11 +26,168 @@ html { font-size: 62.5%; }
 body {
   margin: 0;
   padding: 0;
-  font-family: $sans-serif;
+  font-family: $body-copy;
   font-size: 1.6rem;
   text-align: left;
+  color: $base-font-color;
 }
-header, section { padding: 2rem; }
+section { padding: 2rem; }
+header {
+  margin: 60px 0 0 0;
+  z-index: 10;
+  @include clearfix;
+
+  h1 {
+    margin: .5em auto;
+    padding: 0 2rem;
+  }
+  p {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+}
+.social-media {
+  @include clearfix;
+
+  ul {
+    width: 220px;
+    list-style-type: none;
+    margin: 1.5em auto;
+    padding: 0;
+    display: block;
+    @include clearfix;
+  }
+  li {
+    width: 44px;
+    height: 52px;
+    padding: 15px 1px 0 12px;
+    float: left;
+    background: url("../images/inactiveHex.png") no-repeat center top;
+    background-size: 44px;
+    .fa { font-size: 1.6em; }
+  }
+  .activeHex {
+    background: url("../images/activeHex.png") no-repeat center top;
+    background-size: 44px;
+    &:hover .fa { color: $action-color; }
+  }
+}
+
+
+// Typography //
+h1, h2, h3, h4 {
+  font-family: $header-copy;
+  color: $accent-color;
+  text-align: center;
+}
+h1 {
+  font-weight: normal;
+  font-size: 2.6rem;
+
+  @include media ($large-screen) { font-size: 2.8rem; }
+}
+h2 {
+  font-weight: normal;
+  font-size: 3.2rem;
+
+  @include media ($large-screen) { font-size: 4rem; }
+}
+.fa { color: $accent-color; }
+
+
+// Nav //
+.centered-navigation {
+  $centered-navigation-padding: 1em;
+  $centered-navigation-background: $white;
+  $centered-navigation-height: 60px;
+  $centered-navigation-item-padding: 1em;
+  $centered-navigation-item-nudge: 2.2em;
+  $horizontal-bar-mode: $large-screen;
+
+  background-color: $centered-navigation-background;
+  border-bottom: 1px solid $action-color;
+  min-height: $centered-navigation-height;
+  width: 100%;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+
+  // Mobile view
+
+  .centered-navigation-mobile-menu {
+    color: $action-color;
+    display: block;
+    line-height: $centered-navigation-height;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+
+    @include media ($horizontal-bar-mode) { display: none; }
+    &:focus, &:hover { color: $base-font-color; }
+  }
+
+  // Nav menu
+  .centered-navigation-wrapper {
+    @include outer-container;
+    @include clearfix;
+    position: relative;
+    z-index: 999;
+  }
+
+  ul.centered-navigation-menu {
+    clear: both;
+    display: none;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0;
+    -webkit-transform-style: preserve-3d; // stop webkit flicker
+    width: 100%;
+    z-index: 99999;
+
+    &.show { display: block; }
+
+    @include media ($horizontal-bar-mode) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  // The nav items
+  ul li.nav-link {
+    background: $centered-navigation-background;
+    display: block;
+    line-height: $centered-navigation-height;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+
+    @include media ($horizontal-bar-mode) {
+      border-right: 1px solid $action-color;
+      &:last-of-type { border-right: 0; }
+    }
+    a {
+      color: $action-color;
+      display: inline-block;
+      outline: none;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:focus, &:hover { color: $base-font-color; }
+    }
+
+    @include media($horizontal-bar-mode) {
+      background: transparent;
+      display: inline;
+      line-height: $centered-navigation-height;
+
+      a { padding: 0 $centered-navigation-item-nudge; }
+    }
+  }
+}
+
 
 // Common Elements //
 form {
@@ -28,8 +196,21 @@ form {
 }
 
 // Header //
+.hexBG{
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  background: url("../images/hexagons.png") no-repeat center bottom;
+  background-size: cover;
+  background-clip: content-box;
+}
 #profilePic {
-  max-width: 200px;
+  max-width: 100px;
+  margin: 0 auto;
+  display: block;
+  padding-top: 3.2rem;
 }
 
-// Projects //
+// Recent Projects //
