@@ -38,11 +38,11 @@ header {
   @include clearfix;
 
   h1 {
-    margin: .5em auto;
+    margin: 1.4em auto;
     padding: 0 2rem;
   }
   p {
-    max-width: 800px;
+    max-width: 700px;
     text-align: center;
     margin: 0 auto;
     padding: 0 2rem;
@@ -52,17 +52,17 @@ header {
   @include clearfix;
 
   ul {
-    width: 220px;
+    width: 215px;
     list-style-type: none;
-    margin: 1.5em auto;
+    margin: 2.5em auto;
     padding: 0;
     display: block;
     @include clearfix;
   }
   li {
-    width: 44px;
+    width: 43px;
     height: 52px;
-    padding: 15px 1px 0 12px;
+    padding: 15px 1px 0 11px;
     float: left;
     background: url("../images/inactiveHex.png") no-repeat center top;
     background-size: 44px;
@@ -93,6 +93,13 @@ h2 {
   font-size: 3.2rem;
 
   @include media ($large-screen) { font-size: 4rem; }
+}
+h3 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 1rem;
+
+  @include media ($large-screen) { font-size: 3rem; }
 }
 .fa { color: $accent-color; }
 
@@ -207,10 +214,69 @@ form {
   background-clip: content-box;
 }
 #profilePic {
-  max-width: 100px;
+  max-width: 96px;
   margin: 0 auto;
   display: block;
-  padding-top: 3.2rem;
+  padding-top: 3.5rem;
 }
 
 // Recent Projects //
+#recentProjects {
+  max-width: 1120px;
+  margin: 0 auto;
+
+  a { text-decoration: none; }
+  a:last-of-type {
+    .logoWrap {
+      padding: 1.8rem 0;
+      img { width: 34px; }
+      @include media ($large-screen) { padding: .8rem 0; }
+    }
+  }
+}
+.project {
+  width: 350px;
+  height: 220px;
+  margin: 0 .5rem 2rem;
+  background: url("../images/subHexagons.png") no-repeat center top;
+  background-size: 180%;
+  background-clip: content-box;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+
+  .logoWrap {
+    height: 75px;
+    margin: 1rem 0;
+    padding: 3rem 0;
+    background: url("../images/activeHex.png") no-repeat center;
+    background-size: 48px;
+
+    img {
+      width: 40px;
+      margin: 0 auto;
+      display: block;
+    }
+    @include media ($large-screen) {
+      height: 56px;
+      padding: 2rem 0;
+    }
+  }
+  p {
+    text-align: center;
+    color: $dark-gray;
+    padding: 0 1rem;
+    text-decoration: none;
+  }
+  @include media ($large-screen) {
+    float: left;
+    margin: 0 .5rem;
+  }
+}
+
+
+// Process //
+#process {
+  max-width: 700px;
+  margin: 0 auto;
+}

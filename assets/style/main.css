@@ -2218,10 +2218,10 @@ header {
     content: "";
     display: table; }
   header h1 {
-    margin: .5em auto;
+    margin: 1.4em auto;
     padding: 0 2rem; }
   header p {
-    max-width: 800px;
+    max-width: 700px;
     text-align: center;
     margin: 0 auto;
     padding: 0 2rem; }
@@ -2231,9 +2231,9 @@ header {
   content: "";
   display: table; }
 .social-media ul {
-  width: 220px;
+  width: 215px;
   list-style-type: none;
-  margin: 1.5em auto;
+  margin: 2.5em auto;
   padding: 0;
   display: block; }
   .social-media ul::after {
@@ -2241,9 +2241,9 @@ header {
     content: "";
     display: table; }
 .social-media li {
-  width: 44px;
+  width: 43px;
   height: 52px;
-  padding: 15px 1px 0 12px;
+  padding: 15px 1px 0 11px;
   float: left;
   background: url("../images/inactiveHex.png") no-repeat center top;
   background-size: 44px; }
@@ -2273,6 +2273,14 @@ h2 {
   @media screen and (min-width: 53.75em) {
     h2 {
       font-size: 4rem; } }
+
+h3 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 1rem; }
+  @media screen and (min-width: 53.75em) {
+    h3 {
+      font-size: 3rem; } }
 
 .fa {
   color: #799299; }
@@ -2370,9 +2378,60 @@ form {
   background-clip: content-box; }
 
 #profilePic {
-  max-width: 100px;
+  max-width: 96px;
   margin: 0 auto;
   display: block;
-  padding-top: 3.2rem; }
+  padding-top: 3.5rem; }
+
+#recentProjects {
+  max-width: 1120px;
+  margin: 0 auto; }
+  #recentProjects a {
+    text-decoration: none; }
+  #recentProjects a:last-of-type .logoWrap {
+    padding: 1.8rem 0; }
+    #recentProjects a:last-of-type .logoWrap img {
+      width: 34px; }
+    @media screen and (min-width: 53.75em) {
+      #recentProjects a:last-of-type .logoWrap {
+        padding: .8rem 0; } }
+
+.project {
+  width: 350px;
+  height: 220px;
+  margin: 0 .5rem 2rem;
+  background: url("../images/subHexagons.png") no-repeat center top;
+  background-size: 180%;
+  background-clip: content-box;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
+  .project .logoWrap {
+    height: 75px;
+    margin: 1rem 0;
+    padding: 3rem 0;
+    background: url("../images/activeHex.png") no-repeat center;
+    background-size: 48px; }
+    .project .logoWrap img {
+      width: 40px;
+      margin: 0 auto;
+      display: block; }
+    @media screen and (min-width: 53.75em) {
+      .project .logoWrap {
+        height: 56px;
+        padding: 2rem 0; } }
+  .project p {
+    text-align: center;
+    color: #333;
+    padding: 0 1rem;
+    text-decoration: none; }
+  @media screen and (min-width: 53.75em) {
+    .project {
+      float: left;
+      margin: 0 .5rem; } }
+
+#process {
+  max-width: 700px;
+  margin: 0 auto; }
 
 /*# sourceMappingURL=main.css.map */
