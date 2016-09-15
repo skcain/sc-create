@@ -1,16 +1,8 @@
+@import "variables";
 @import "bourbon/bourbon";
 @import "neat/neat";
 @import "font-awesome";
-
-// Variables //
-$header-copy: 'Source Sans Pro', sans-serif;
-$body-copy: 'Source Sans Pro', sans-serif;
-$dark-gray: #333 !default;
-$large-screen: 53.75em !default;
-$base-font-color: $dark-gray !default;
-$white: #ffffff;
-$action-color: #CC3B6A;
-$accent-color: #799299;
+@import "buttons";
 
 
 // Design Elements //
