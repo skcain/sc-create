@@ -155,6 +155,7 @@ a:link, a:visited, a:active {
   color: $action-color;
 }
 a:hover { color: $dark-gray; }
+.center { text-align: center; }
 
 
 // Nav //
@@ -332,6 +333,23 @@ form {
     display: block;
   }
 }
+
+
+//  Resume //
+.resume {
+  h3, h4 { text-align: center; }
+  #fellow, #vis, #intern {
+    padding:1 rem;
+  }
+  #fellow {
+    background: url("../../images/resume-fellow.png") no-repeat center top;
+    background-size: 100%;
+    background-clip: content-box;
+  }
+  #vis {}
+  #intern {}
+}
+
 
 //  Footer //
 footer {

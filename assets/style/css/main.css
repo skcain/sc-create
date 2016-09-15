@@ -2753,6 +2753,9 @@ a:link, a:visited, a:active {
 a:hover {
   color: #333; }
 
+.center {
+  text-align: center; }
+
 .centered-navigation {
   background-color: #ffffff;
   border-bottom: 1px solid #CC3B6A;
@@ -2894,6 +2897,15 @@ form {
   text-align: center;
   margin: 0 auto;
   display: block; }
+
+.resume h3, .resume h4 {
+  text-align: center; }
+.resume #fellow, .resume #vis, .resume #intern {
+  padding: 1 rem; }
+.resume #fellow {
+  background: url("../../images/resume-fellow.png") no-repeat center top;
+  background-size: 100%;
+  background-clip: content-box; }
 
 footer .in-progress {
   width: 100%;
