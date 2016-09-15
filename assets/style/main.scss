@@ -309,7 +309,7 @@ form {
     text-align: center;
     font-weight: normal;
     color: $dark-gray;
-    padding: 0 1rem;
+    padding: 0 2rem;
     text-decoration: none;
   }
   @include media ($large-screen) {
@@ -373,6 +373,10 @@ form {
     margin-top: 4rem;
   }
 }
+
+
+// Contact //
+.contact { margin-top: 60px; }
 
 
 //  Footer //

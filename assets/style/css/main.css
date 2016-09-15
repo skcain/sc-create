@@ -2882,7 +2882,7 @@ form {
     text-align: center;
     font-weight: normal;
     color: #333;
-    padding: 0 1rem;
+    padding: 0 2rem;
     text-decoration: none; }
   @media screen and (min-width: 53.75em) {
     .project {
@@ -2932,6 +2932,9 @@ form {
   background-size: 100%;
   background-clip: content-box;
   margin-top: 4rem; }
+
+.contact {
+  margin-top: 60px; }
 
 footer .in-progress {
   width: 100%;
