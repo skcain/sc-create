@@ -261,12 +261,12 @@ form {
 }
 
 
-// Recent Projects //
-#recentProjects {
-  max-width: 1150px;
+// Featured Projects //
+#featuredProjects {
+  max-width: 760px;
 
   a { text-decoration: none; }
-  a:last-of-type {
+  a.marginChange {
     .logoWrap {
       padding: 1.8rem 0;
       img {
@@ -279,8 +279,7 @@ form {
 }
 .project {
   width: 350px;
-  height: 220px;
-  margin: 0 .5rem 2rem;
+  margin: .5rem .5rem 2rem;
   background: url("../../images/card-hexagons.png") no-repeat center top;
   background-size: 180%;
   background-clip: content-box;
@@ -318,7 +317,7 @@ form {
   }
   @include media ($large-screen) {
     float: left;
-    margin: 0 .5rem;
+    margin: .5rem;
   }
 }
 
@@ -382,6 +381,17 @@ form {
 // Contact //
 .contact { margin-top: 60px; }
 
+
+// All Projects //
+.projects {
+  max-width: 760px; 
+  margin-top: 60px;
+  .project {
+    background: none;
+    padding: 1rem 0;
+    a { color: $dark-gray; }
+  }
+}
 
 //  Footer //
 footer {
