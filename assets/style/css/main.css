@@ -2625,7 +2625,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   text-align: left;
   color: #333; }
 
@@ -2667,7 +2667,7 @@ header {
 .social-media li {
   width: 43px;
   height: 52px;
-  padding: 15px 1px 0 11px;
+  padding: 13px 1px 0 10px;
   float: left;
   background: url("../../images/inactiveHex.png") no-repeat center top;
   background-size: 44px; }
@@ -2679,25 +2679,56 @@ header {
   .social-media .activeHex:hover .fa {
     color: #CC3B6A; }
 
+#primary .hexBG {
+  height: 300px;
+  background: url("../../images/hexagons.png") no-repeat center bottom;
+  background-size: cover;
+  background-clip: content-box; }
+#primary #hex-image {
+  max-width: 96px;
+  padding-top: 3.5rem; }
+
+#secondary .hexBG {
+  height: 250px;
+  background: url("../../images/sub-hexagons.png") no-repeat center bottom;
+  background-size: cover;
+  background-clip: content-box; }
+#secondary #hex-image {
+  max-width: 65px;
+  padding-top: 11rem; }
+
+.hexBG {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1; }
+
+#hex-image {
+  margin: 0 auto;
+  display: block; }
+
+.portfolio #hex-image {
+  padding-top: 9.5rem !important; }
+
 h1, h2, h3, h4 {
   font-family: "Source Sans Pro", sans-serif;
   color: #799299; }
 
 h1 {
   font-weight: normal;
-  font-size: 2.6rem;
+  font-size: 3.4rem;
   text-align: center; }
   @media screen and (min-width: 53.75em) {
     h1 {
-      font-size: 2.8rem; } }
+      font-size: 3.2rem; } }
 
 h2 {
   font-weight: normal;
-  font-size: 3.2rem;
+  font-size: 4rem;
   text-align: center; }
   @media screen and (min-width: 53.75em) {
     h2 {
-      font-size: 4rem; } }
+      font-size: 5rem; } }
 
 h3 {
   font-weight: normal;
@@ -2705,7 +2736,7 @@ h3 {
   line-height: 1rem; }
   @media screen and (min-width: 53.75em) {
     h3 {
-      font-size: 3rem; } }
+      font-size: 2.8rem; } }
 
 h4 {
   font-weight: bold;
@@ -2804,22 +2835,6 @@ form {
   float: left;
   margin: 0 1rem; }
 
-.hexBG {
-  width: 100%;
-  height: 300px;
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  background: url("../../images/hexagons.png") no-repeat center bottom;
-  background-size: cover;
-  background-clip: content-box; }
-
-#profilePic {
-  max-width: 96px;
-  margin: 0 auto;
-  display: block;
-  padding-top: 3.5rem; }
-
 #recentProjects {
   max-width: 1150px; }
   #recentProjects a {
@@ -2827,7 +2842,8 @@ form {
   #recentProjects a:last-of-type .logoWrap {
     padding: 1.8rem 0; }
     #recentProjects a:last-of-type .logoWrap img {
-      width: 34px; }
+      width: 34px;
+      margin-top: .4rem; }
     @media screen and (min-width: 53.75em) {
       #recentProjects a:last-of-type .logoWrap {
         padding: .8rem 0; } }
@@ -2836,7 +2852,7 @@ form {
   width: 350px;
   height: 220px;
   margin: 0 .5rem 2rem;
-  background: url("../../images/subHexagons.png") no-repeat center top;
+  background: url("../../images/card-hexagons.png") no-repeat center top;
   background-size: 180%;
   background-clip: content-box;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -2874,12 +2890,10 @@ form {
   max-width: 700px;
   margin: 0 auto; }
 
-#project-container {
-  margin-top: 60px; }
-  #project-container .projectLink {
-    text-align: center;
-    margin: 0 auto;
-    display: block; }
+#project-container .projectLink {
+  text-align: center;
+  margin: 0 auto;
+  display: block; }
 
 footer .in-progress {
   width: 100%;
