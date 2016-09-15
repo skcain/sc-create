@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Stephanie Cain's Online Portfolio</title>
+  <meta name="description" content="Project: Employee Intranet">
+  <meta name="author" content="Stephanie Cain">
+
+  <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
+  <script src ="assets/script/main.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200italic,300,300italic,400,400italic,600,600italic,700,700italic,900,900italic" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style/css/main.css">
+</head>
+
+<body id="secondary">
+  <div class="centered-navigation" role="banner">
+    <div class="centered-navigation-wrapper">
+      <nav role="navigation">
+        <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
+          <li class="nav-link"><a href="index.html" title="Home Page">Home</a></li>
+          <li class="nav-link"><a href="resume.html" title="Resume">Resume</a></li>
+          <li class="nav-link"><a href="contact.html" title="Contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="javascript:void(0)" id="nav-open" class="centered-navigation-mobile-menu" onclick="menuToggle()">Open Menu</a>
+      <a href="javascript:void(0)" id="nav-close" class="centered-navigation-mobile-menu" onclick="menuToggle()">Close Menu</a>
+    </div>
+  </div>
+  <div class="hexBG"></div>
+  <img id="hex-image" src="assets/images/osmre-logo.png" alt="Office of Surface Mining Reclamation and Enforcement logo"/>
+  <section id="project-container">
+    <div class="button-wrapper">
+      <a href="index.html#recentProjects" title="Recent Projects" class="basic-button basic-button-outline center">See recent projects</a>
+    </div>
+    <h2>Employee Intranet</h2>
+    <h3>Problem</h3>
+    <p>Employee Intranet was out-of-date and difficult to use, resulting in low usage and inconsistent internal communication.</p>
+
+    <h3>Solution</h3>
+    <p>Create a website that was easy to use and shared current information about topics that were important to employees.</p>
+
+    <h3>Process</h3>
+    <p>The employee intranet at the Office of Surface Mining Reclamation and Enforcement (OSMRE) was an out-of-date list of links that resembled Windows Explorer. This is a common problem across government websites.</p>
+    <p>The web team saw a need for improving this important employee resource and so we began the process of a re-design. I interviewed employees about their current usage of the intranet and found that most people didn’t know it existed. If they were aware of the intranet, they rarely found it useful because the content was out-of-date.</p>
+
+    <p>Next we created a handful of prototypes and watched employees interact with the designs. After refining them further, we were able to pull the best parts of each into a final prototype and begin building.</p>
+    <h4>New Feature: Employee Directory</h4>
+    <p>When there was a change in employees, an updated phone list was printed for each staff person including contact information, position title and managers. A static PDF of OSMRE’s organizational chart accompanied the new phone list. Apart from being redundant, it was difficult to find information about someone who was not located in your immediate office.</p>
+    <p>Many staff members were using an employee directory on OSMRE’s public-facing website to access contact information. I wanted to create a feature on the employee intranet that would function both as a phone chart and an organizational chart. I chose to re-design them both to be based on the same JSON file to reduce the amount of time spent updating the two directories.</p>
+    <p>I created an excel spreadsheet with employee information and then converted to JSON. This way, someone who was not technical could update the excel spreadsheet and replace the JSON file on both the public website and employee intranet.</p>
+    <p>For the design, I created a hierarchical structure where a user could expand each region, branch and division and see the corresponding manager and employees. Clicking on an individual’s name would reveal contact information and a summary of their responsibilities. </p>
+  </section>
+  <footer>
+    <div class="social-media">
+      <ul>
+        <li class="activeHex"><a href="https://www.linkedin.com/in/skcain" target="_blank" title="Stephanie Cain's LinkedIn"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+</a></li>
+        <li>&nbsp;</li>
+        <li class="activeHex"><a href="https://github.com/skcain" target="_blank" title="Stephanie Cain's Github"><i class="fa fa-github-square" aria-hidden="true"></i>
+</a></li>
+        <li>&nbsp;</li>
+        <li class="activeHex"><a href="https://twitter.com/sc_create" target="_blank" title="Stephanie Cain's Twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i>
+</a></li>
+      </ul>
+    </div>
+    <div class="in-progress">This website is a work in progress. If you have comments, please send me an email <a href="mailto:aunaprendoad@gmail.com" title="Email Stephanie Cain">here</a>.</div>
+  </footer>
+</body>
+</html>

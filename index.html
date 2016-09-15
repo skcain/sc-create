@@ -15,14 +15,14 @@
   <link rel="stylesheet" href="assets/style/css/main.css">
 </head>
 
-<body>
+<body id="primary">
   <div class="centered-navigation" role="banner">
     <div class="centered-navigation-wrapper">
       <nav role="navigation">
         <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
           <li class="nav-link"><a href="index.html" title="Home Page">Home</a></li>
           <li class="nav-link"><a href="resume.html" title="Resume">Resume</a></li>
-          <li class="nav-link"><a href="javascript:void(0)" title="Contact">Contact</a></li>
+          <li class="nav-link"><a href="contact.html" title="Contact">Contact</a></li>
         </ul>
       </nav>
       <a href="javascript:void(0)" id="nav-open" class="centered-navigation-mobile-menu" onclick="menuToggle()">Open Menu</a>
@@ -31,7 +31,7 @@
   </div>
   <div class="hexBG"></div>
   <header>
-    <img id="profilePic" src="assets/images/scProfile.png" alt="Stephanie Cain's profile picture"/>
+    <img id="hex-image" src="assets/images/scProfile.png" alt="Stephanie Cain's profile picture"/>
     <h1>My name is Stephanie Cain.<br>I am a product designer and I<br> develop user focused civic technology.</h1>
     <div class="social-media">
       <ul>
@@ -47,8 +47,8 @@
     </div>
     <p>My experience in the public sector has equipped me with expertise in government design, user engagement and workforce. I enjoy building relationships with people and creating growth opportunties for under-served communities.</p>
   </header>
-  <section id="recentProjects">
-    <h2>Recent Projects</h2>
+  <section id="featuredProjects">
+    <h2>Featured Projects</h2>
 
     <a href="work-forward-nola.html" title="Learn more about Work Forward NOLA">
       <div class="project" id="workforwardNOLA">
@@ -66,11 +66,19 @@
       </div>
     </a>
 
-    <a href="portfolio.html" title="Learn more about my process creating an online portfolio">
+    <a class="marginChange" href="portfolio.html" title="Learn more about my process creating an online portfolio">
       <div class="project" id="personalPortfolio">
         <div class="logoWrap"><img src="assets/images/portfolio-icon.png" title="Personal Portfolio Icon" alt="Personal Portfolio Icon"/></div>
         <h3>Personal Portfolio</h3>
         <p>A mobile-first website that describes the process of my recent work.</p>
+      </div>
+    </a>
+
+    <a class="marginChange" href="web-request-system.html" title="Learn more about my process creating a web request system">
+      <div class="project" id="osmre-wrs">
+        <div class="logoWrap"><img src="assets/images/osmre-logo.png" title="Office of Surface Mining Reclamation and Enforcement Logo" alt="Office of Surface Mining Reclamation and Enforcement Logo"/></div>
+        <h3>Web Request System</h3>
+        <p>Re-design of the regional and national public-facing websites to improve navigation and develop consistent branding.</p>
       </div>
     </a>
     <div class="clearfix"></div>
