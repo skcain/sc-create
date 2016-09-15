@@ -2911,6 +2911,9 @@ form {
   margin: 0 auto;
   padding-top: 13rem;
   display: block; }
+.resume #fellow .project, .resume #vis .project, .resume #intern .project {
+  height: 160px;
+  background: none; }
 .resume #fellow {
   background: url("../../images/resume-fellow.png") no-repeat center top;
   background-size: 100%;
@@ -2922,11 +2925,13 @@ form {
 .resume #vis {
   background: url("../../images/resume-vis.png") no-repeat center top;
   background-size: 100%;
-  background-clip: content-box; }
+  background-clip: content-box;
+  margin-top: 4rem; }
 .resume #intern {
   background: url("../../images/resume-intern.png") no-repeat center top;
   background-size: 100%;
-  background-clip: content-box; }
+  background-clip: content-box;
+  margin-top: 4rem; }
 
 footer .in-progress {
   width: 100%;

@@ -348,6 +348,10 @@ form {
       padding-top: 13rem;
       display: block;
     }
+    .project {
+      height: 160px;
+      background: none;
+    }
   }
   #fellow {
     background: url("../../images/resume-fellow.png") no-repeat center top;
@@ -359,11 +363,15 @@ form {
   #vis {
     background: url("../../images/resume-vis.png") no-repeat center top;
     background-size: 100%;
-    background-clip: content-box;}
+    background-clip: content-box;
+    margin-top: 4rem;
+  }
   #intern {
     background: url("../../images/resume-intern.png") no-repeat center top;
     background-size: 100%;
-    background-clip: content-box;}
+    background-clip: content-box;
+    margin-top: 4rem;
+  }
 }
 
 
