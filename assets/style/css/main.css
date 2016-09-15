@@ -2733,15 +2733,19 @@ h2 {
 h3 {
   font-weight: normal;
   font-size: 2.5rem;
-  line-height: 1rem; }
+  margin: .5rem 0; }
   @media screen and (min-width: 53.75em) {
     h3 {
       font-size: 2.8rem; } }
 
 h4 {
   font-weight: bold;
-  font-size: 2rem;
-  line-height: 1rem; }
+  font-size: 2rem; }
+
+h5 {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin: 0; }
 
 .fa {
   color: #799299; }

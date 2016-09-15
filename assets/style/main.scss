@@ -140,14 +140,18 @@ h2 {
 h3 {
   font-weight: normal;
   font-size: 2.5rem;
-  line-height: 1rem;
+  margin: .5rem 0;
 
   @include media ($large-screen) { font-size: 2.8rem; }
 }
 h4 {
   font-weight: bold;
   font-size: 2rem;
-  line-height: 1rem;
+}
+h5 {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin: 0;
 }
 .fa { color: $accent-color; }
 a:link, a:visited, a:active {
