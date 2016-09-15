@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Posting Pro</title>
+  <meta name="description" content="Project: Posting Pro">
+  <meta name="author" content="Stephanie Cain">
+
+  <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
+  <script src ="assets/script/main.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200italic,300,300italic,400,400italic,600,600italic,700,700italic,900,900italic" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style/css/main.css">
+</head>
+
+<body>
+  <div class="centered-navigation" role="banner">
+    <div class="centered-navigation-wrapper">
+      <nav role="navigation">
+        <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
+          <li class="nav-link"><a href="index.html" title="Home Page">Home</a></li>
+          <li class="nav-link"><a href="javascript:void(0)" title="Resume">Resume</a></li>
+          <li class="nav-link"><a href="javascript:void(0)" title="Contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="javascript:void(0)" id="nav-open" class="centered-navigation-mobile-menu" onclick="menuToggle()">Open Menu</a>
+      <a href="javascript:void(0)" id="nav-close" class="centered-navigation-mobile-menu" onclick="menuToggle()">Close Menu</a>
+    </div>
+  </div>
+  <section id="project-container">
+    <h2>Posting Pro</h2>
+    <a class="projectLink" href="https://posting-pro.herokuapp.com/" title="Posting Pro" target="_blank">https://posting-pro.herokuapp.com/</a>
+
+    <h3>Problem</h3>
+    <p>Employers inadvertently write job postings that dissuade qualified candidates from applying, resulting in turnover, low quality work and lack of growth opportunities.</p>
+
+    <h3>Solution</h3>
+    <p>Build a website that helps employers create job postings that are free of implicit bias so that a better match can be made between employer and candidate.</p>
+
+    <h3>Process</h3>
+    <p>A partner on our project, Skillful, a Markle Initiative, was developing a platform to promote skills-based hiring. They found that employers were increasingly writing job postings that included education requirements higher than necessary. For instance, although the current workforce in a given position might on average have a high school diploma, an employer might ask for a Bachelor’s degree or higher. This practice eliminates a large portion of skilled and quality workers from applying. Furthermore, hiring overqualified workers can lead to turnover, lower quality work and a lack of growth opportunities.</p>
+    <p>At the beginning of our fellowship, we were asked to research implicit bias in job postings and develop ways that it might be identified and removed. In addition to education bias, we learned that reading level might also deter a qualified person from applying. For example, if a job requires a high school diploma but is written at a college level or higher, it may not be approachable to someone who is capable of completing the work. Furthermore, the average adult reading level in the U.S. is 7th/8th grade. Finally, we researched gender bias and how the language used in a job posting can attract more male or female candidates, perpetuating a lack of diversity in the workplace.</p>
+    <p>A couple days after being placed on the New Orleans team, our team began our first sprint to develop Posting Pro. The initial iteration was built upon two open-source libraries. The first flagged words based on three categories of implicit bias, and the second determined the equivalent grade reading level for a block of text. The tool would serve to identify areas of implicit bias within a job posting.</p>
+    <p>Over the next couple months we continued to refine and test the tool with hiring managers and HR representatives in New Orleans and San Francisco. Although we found that Posting Pro added value and promoted diversity, we needed to better understand the hiring process so that we could integrate the tool without adding extra work.</p>
+    <p>Halfway through the year we worked to add a “Start from Template” feature to Posting Pro. This would allow an employer to create a job posting from one that already existed for a given position. The templates were written without implicit bias and explicitly referenced skills required for the position rather than using education as a proxy. As the hiring manager edited the posting, it would be analyzed for implicit bias.</p>
+    <p>We determined that by helping an employer to create a job posting faster, we could integrate the tool into hiring process and create skills-based and inclusive job postings. We are still developing Posting Pro, you can check it out now by visiting <a href="https://posting-pro.herokuapp.com/" title="Posting Pro" target="_blank">posting-pro.herokuapp.com/</a>.</p>
+  </section>
+  <footer>
+    <div class="social-media">
+      <ul>
+        <li class="activeHex"><a href="https://www.linkedin.com/in/skcain" target="_blank" title="Stephanie Cain's LinkedIn"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+</a></li>
+        <li>&nbsp;</li>
+        <li class="activeHex"><a href="https://github.com/skcain" target="_blank" title="Stephanie Cain's Github"><i class="fa fa-github-square" aria-hidden="true"></i>
+</a></li>
+        <li>&nbsp;</li>
+        <li class="activeHex"><a href="https://twitter.com/sc_create" target="_blank" title="Stephanie Cain's Twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i>
+</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
