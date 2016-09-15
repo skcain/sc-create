@@ -84,26 +84,32 @@ header {
 h1, h2, h3, h4 {
   font-family: $header-copy;
   color: $accent-color;
-  text-align: center;
 }
 h1 {
   font-weight: normal;
   font-size: 2.6rem;
+  text-align: center;
 
   @include media ($large-screen) { font-size: 2.8rem; }
 }
 h2 {
   font-weight: normal;
   font-size: 3.2rem;
+  text-align: center;
 
   @include media ($large-screen) { font-size: 4rem; }
 }
 h3 {
-  font-weight: bold;
+  font-weight: normal;
   font-size: 2.5rem;
   line-height: 1rem;
 
   @include media ($large-screen) { font-size: 3rem; }
+}
+h4 {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1rem;
 }
 .fa { color: $accent-color; }
 a:link, a:visited, a:active {
@@ -270,9 +276,13 @@ form {
       padding: 2rem 0;
     }
   }
+  h3 {
+    text-align: center;
+    font-weight: bold;
+  }
   p {
     text-align: center;
-    font-weight: normal; 
+    font-weight: normal;
     color: $dark-gray;
     padding: 0 1rem;
     text-decoration: none;

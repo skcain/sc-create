@@ -2259,30 +2259,36 @@ header {
 
 h1, h2, h3, h4 {
   font-family: "Source Sans Pro", sans-serif;
-  color: #799299;
-  text-align: center; }
+  color: #799299; }
 
 h1 {
   font-weight: normal;
-  font-size: 2.6rem; }
+  font-size: 2.6rem;
+  text-align: center; }
   @media screen and (min-width: 53.75em) {
     h1 {
       font-size: 2.8rem; } }
 
 h2 {
   font-weight: normal;
-  font-size: 3.2rem; }
+  font-size: 3.2rem;
+  text-align: center; }
   @media screen and (min-width: 53.75em) {
     h2 {
       font-size: 4rem; } }
 
 h3 {
-  font-weight: bold;
+  font-weight: normal;
   font-size: 2.5rem;
   line-height: 1rem; }
   @media screen and (min-width: 53.75em) {
     h3 {
       font-size: 3rem; } }
+
+h4 {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1rem; }
 
 .fa {
   color: #799299; }
@@ -2428,6 +2434,9 @@ form {
       .project .logoWrap {
         height: 56px;
         padding: 2rem 0; } }
+  .project h3 {
+    text-align: center;
+    font-weight: bold; }
   .project p {
     text-align: center;
     font-weight: normal;
