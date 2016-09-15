@@ -2898,12 +2898,33 @@ form {
   margin: 0 auto;
   display: block; }
 
+.resume h2 {
+  margin: 3rem 0; }
+.resume h3 {
+  margin-top: 5rem; }
 .resume h3, .resume h4 {
   text-align: center; }
-.resume #fellow, .resume #vis, .resume #intern {
-  padding: 1 rem; }
+.resume section {
+  margin-top: 60px; }
+.resume #fellow img, .resume #vis img, .resume #intern img {
+  max-width: 65px;
+  margin: 0 auto;
+  padding-top: 13rem;
+  display: block; }
 .resume #fellow {
   background: url("../../images/resume-fellow.png") no-repeat center top;
+  background-size: 100%;
+  background-clip: content-box; }
+  .resume #fellow h3 {
+    margin-top: 7rem; }
+  .resume #fellow img {
+    padding-top: 15rem; }
+.resume #vis {
+  background: url("../../images/resume-vis.png") no-repeat center top;
+  background-size: 100%;
+  background-clip: content-box; }
+.resume #intern {
+  background: url("../../images/resume-intern.png") no-repeat center top;
   background-size: 100%;
   background-clip: content-box; }
 

@@ -337,17 +337,33 @@ form {
 
 //  Resume //
 .resume {
+  h2 { margin: 3rem 0; }
+  h3 { margin-top: 5rem; }
   h3, h4 { text-align: center; }
+  section { margin-top: 60px; }
   #fellow, #vis, #intern {
-    padding:1 rem;
+    img {
+      max-width: 65px;
+      margin: 0 auto;
+      padding-top: 13rem;
+      display: block;
+    }
   }
   #fellow {
     background: url("../../images/resume-fellow.png") no-repeat center top;
     background-size: 100%;
     background-clip: content-box;
+    h3 { margin-top: 7rem; }
+    img { padding-top: 15rem; }
   }
-  #vis {}
-  #intern {}
+  #vis {
+    background: url("../../images/resume-vis.png") no-repeat center top;
+    background-size: 100%;
+    background-clip: content-box;}
+  #intern {
+    background: url("../../images/resume-intern.png") no-repeat center top;
+    background-size: 100%;
+    background-clip: content-box;}
 }
 
 
