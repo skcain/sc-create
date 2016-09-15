@@ -5,6 +5,7 @@
 // Variables //
 $header-copy: 'Source Sans Pro', sans-serif;
 $body-copy: 'Source Sans Pro', sans-serif;
+$light-gray: #E0E0E0 !default;
 $dark-gray: #333 !default;
 $large-screen: 53.75em !default;
 $base-font-color: $dark-gray !default;
@@ -307,5 +308,16 @@ form {
     text-align: center;
     margin: 0 auto;
     display: block;
+  }
+}
+
+//  Footer //
+footer {
+  .in-progress {
+    width: 100%;
+    background-color: $light-gray;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
   }
 }
