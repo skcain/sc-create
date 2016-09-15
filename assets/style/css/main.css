@@ -2208,6 +2208,8 @@ body {
   color: #333; }
 
 section {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 2rem; }
 
 header {
@@ -2245,12 +2247,12 @@ header {
   height: 52px;
   padding: 15px 1px 0 11px;
   float: left;
-  background: url("../images/inactiveHex.png") no-repeat center top;
+  background: url("../../images/inactiveHex.png") no-repeat center top;
   background-size: 44px; }
   .social-media li .fa {
     font-size: 1.6em; }
 .social-media .activeHex {
-  background: url("../images/activeHex.png") no-repeat center top;
+  background: url("../../images/activeHex.png") no-repeat center top;
   background-size: 44px; }
   .social-media .activeHex:hover .fa {
     color: #CC3B6A; }
@@ -2284,6 +2286,13 @@ h3 {
 
 .fa {
   color: #799299; }
+
+a:link, a:visited, a:active {
+  font-weight: bold;
+  color: #CC3B6A; }
+
+a:hover {
+  color: #333; }
 
 .centered-navigation {
   background-color: #ffffff;
@@ -2373,7 +2382,7 @@ form {
   position: absolute;
   top: 0;
   z-index: -1;
-  background: url("../images/hexagons.png") no-repeat center bottom;
+  background: url("../../images/hexagons.png") no-repeat center bottom;
   background-size: cover;
   background-clip: content-box; }
 
@@ -2384,8 +2393,7 @@ form {
   padding-top: 3.5rem; }
 
 #recentProjects {
-  max-width: 1120px;
-  margin: 0 auto; }
+  max-width: 1150px; }
   #recentProjects a {
     text-decoration: none; }
   #recentProjects a:last-of-type .logoWrap {
@@ -2400,7 +2408,7 @@ form {
   width: 350px;
   height: 220px;
   margin: 0 .5rem 2rem;
-  background: url("../images/subHexagons.png") no-repeat center top;
+  background: url("../../images/subHexagons.png") no-repeat center top;
   background-size: 180%;
   background-clip: content-box;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -2410,7 +2418,7 @@ form {
     height: 75px;
     margin: 1rem 0;
     padding: 3rem 0;
-    background: url("../images/activeHex.png") no-repeat center;
+    background: url("../../images/activeHex.png") no-repeat center;
     background-size: 48px; }
     .project .logoWrap img {
       width: 40px;
@@ -2433,5 +2441,12 @@ form {
 #process {
   max-width: 700px;
   margin: 0 auto; }
+
+#project-container {
+  margin-top: 60px; }
+  #project-container .projectLink {
+    text-align: center;
+    margin: 0 auto;
+    display: block; }
 
 /*# sourceMappingURL=main.css.map */
