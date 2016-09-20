@@ -40,7 +40,7 @@ section {
   padding: 2rem;
 }
 header {
-  margin: 60px 0 0 0;
+  margin: 100px 0 0 0;
   z-index: 10;
   @include clearfix;
 
@@ -87,10 +87,11 @@ header {
     background: url("../../images/hexagons.png") no-repeat center bottom;
     background-size: cover;
     background-clip: content-box;
+    margin-top: 50px;
   }
   #hex-image {
     max-width: 96px;
-    padding-top: 3.5rem;
+    padding-top: 4.5rem;
   }
 }
 #secondary {
@@ -172,15 +173,24 @@ a:hover { color: $dark-gray; }
   $horizontal-bar-mode: $large-screen;
 
   background-color: $centered-navigation-background;
-  border-bottom: 1px solid $action-color;
+  border-bottom: 2px solid $action-color;
   min-height: $centered-navigation-height;
   width: 100%;
   z-index: 9999;
   position: fixed;
   top: 0;
 
-  // Mobile view
+  // In Progress
+  .in-progress {
+    width: 100%;
+    background-color: $white;
+    border-bottom: 2px solid $action-color;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 1rem;
+  }
 
+  // Mobile view
   .centered-navigation-mobile-menu {
     color: $action-color;
     display: block;
@@ -384,7 +394,7 @@ form {
 
 // All Projects //
 .projects {
-  max-width: 760px; 
+  max-width: 760px;
   margin-top: 60px;
   .project {
     background: none;
@@ -394,12 +404,3 @@ form {
 }
 
 //  Footer //
-footer {
-  .in-progress {
-    width: 100%;
-    background-color: $light-gray;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 1rem;
-  }
-}
