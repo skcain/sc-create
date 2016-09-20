@@ -2693,10 +2693,11 @@ header {
   height: 250px;
   background: url("../../images/sub-hexagons.png") no-repeat center bottom;
   background-size: cover;
-  background-clip: content-box; }
+  background-clip: content-box;
+  margin-top: 60px; }
 #secondary #hex-image {
   max-width: 65px;
-  padding-top: 11rem; }
+  padding-top: 17rem; }
 
 .hexBG {
   width: 100%;
@@ -2904,10 +2905,12 @@ form {
   max-width: 700px;
   margin: 0 auto; }
 
-#project-container .projectLink {
-  text-align: center;
-  margin: 0 auto;
-  display: block; }
+#project-container {
+  margin-top: 4rem; }
+  #project-container .projectLink {
+    text-align: center;
+    margin: 0 auto;
+    display: block; }
 
 .resume h2 {
   margin: 3rem 0; }
@@ -2916,7 +2919,7 @@ form {
 .resume h3, .resume h4 {
   text-align: center; }
 .resume section {
-  margin-top: 60px; }
+  margin-top: 100px; }
 .resume #fellow img, .resume #vis img, .resume #intern img {
   max-width: 65px;
   margin: 0 auto;
@@ -2944,8 +2947,8 @@ form {
   background-clip: content-box;
   margin-top: 4rem; }
 
-.contact {
-  margin-top: 60px; }
+.about {
+  margin-top: 100px; }
 
 .projects {
   max-width: 760px;
