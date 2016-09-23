@@ -2912,6 +2912,8 @@ form {
     background-color: #96aaaf; }
     .card:active .card-header {
       background-color: #96aaaf; }
+  .card .project {
+    height: 220px; }
 
 #featuredProjects {
   max-width: 760px; }
@@ -2978,7 +2980,7 @@ form {
   padding-top: 13rem;
   display: block; }
 .resume #fellow .project, .resume #vis .project, .resume #intern .project {
-  height: 160px;
+  height: 170px;
   background: none; }
 .resume #fellow {
   background: url("../../images/resume-fellow.png") no-repeat center top;
