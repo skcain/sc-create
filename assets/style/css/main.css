@@ -2851,20 +2851,72 @@ form {
   float: left;
   margin: 0 1rem; }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .cards a:link, .cards a:visited, .cards a:active {
+    color: #333;
+    font-weight: normal;
+    border-bottom: 0;
+    text-decoration: none; }
+
+.card {
+  border: 1px solid #799299;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px #e6e6e6;
+  cursor: pointer;
+  flex-basis: 15em;
+  flex-grow: 1;
+  margin: 0 1em 1.5em 1em;
+  position: relative;
+  transition: all 0.2s ease-in-out; }
+  .card .card-image {
+    background: url("../../images/card-hexagons.png") no-repeat center top;
+    height: 110px;
+    max-height: 150px;
+    overflow: hidden; }
+    .card .card-image img {
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
+      width: 35px;
+      margin: 3rem auto;
+      display: block; }
+    .card .card-image .square {
+      margin-top: 2rem; }
+  .card .card-header {
+    background-color: #CC3B6A;
+    border-radius: 3px 3px 0 0;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2.5em;
+    padding: 0.5em 0.75em;
+    transition: all 0.2s ease-in-out; }
+    .card .card-header h3 {
+      color: #ffffff;
+      margin-top: 0 !important; }
+  .card .card-copy {
+    background-color: #ffffff;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    padding: 0.75em 0.75em; }
+    .card .card-copy p {
+      margin: 0 0 0.75em; }
+  .card:focus, .card:hover {
+    cursor: pointer; }
+    .card:focus img, .card:hover img {
+      opacity: 0.7; }
+  .card:active {
+    background-color: #96aaaf; }
+    .card:active .card-header {
+      background-color: #96aaaf; }
+  .card .project {
+    height: 220px; }
+
 #featuredProjects {
   max-width: 760px; }
-  #featuredProjects a {
-    text-decoration: none; }
-  #featuredProjects a.marginChange .logoWrap {
-    padding: 1.8rem 0; }
-    #featuredProjects a.marginChange .logoWrap img {
-      width: 34px;
-      margin-top: .4rem; }
-    @media screen and (min-width: 53.75em) {
-      #featuredProjects a.marginChange .logoWrap {
-        padding: .8rem 0; } }
-  #featuredProjects .project {
-    height: 220px; }
 
 .project {
   width: 350px;
@@ -2915,7 +2967,7 @@ form {
     display: block; }
 
 .resume h2 {
-  margin: 10rem 0 2rem; }
+  margin: 8rem 0 2rem; }
 .resume h3 {
   margin-top: 5rem; }
 .resume h3, .resume h4 {
