@@ -2863,6 +2863,8 @@ form {
     @media screen and (min-width: 53.75em) {
       #featuredProjects a.marginChange .logoWrap {
         padding: .8rem 0; } }
+  #featuredProjects .project {
+    height: 220px; }
 
 .project {
   width: 350px;
@@ -2913,7 +2915,7 @@ form {
     display: block; }
 
 .resume h2 {
-  margin: 3rem 0; }
+  margin: 10rem 0 2rem; }
 .resume h3 {
   margin-top: 5rem; }
 .resume h3, .resume h4 {
@@ -2926,7 +2928,7 @@ form {
   padding-top: 13rem;
   display: block; }
 .resume #fellow .project, .resume #vis .project, .resume #intern .project {
-  height: 160px;
+  height: 170px;
   background: none; }
 .resume #fellow {
   background: url("../../images/resume-fellow.png") no-repeat center top;
