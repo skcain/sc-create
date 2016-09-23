@@ -283,91 +283,92 @@ form {
   float: left;
   margin: 0 1rem;
 }
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  a:link, a:visited, a:active {
+    color: $dark-gray;
+    font-weight: normal;
+    border-bottom: 0;
+    text-decoration: none;
+  }
+}
 
+.card {
+  border: $card-border;
+  border-radius: $base-border-radius;
+  box-shadow: 0 2px 4px darken($base-background-color, 10%);
+  cursor: pointer;
+  flex-basis: 15em;
+  flex-grow: 1;
+  margin: 0 $card-margin $base-spacing $card-margin;
+  position: relative;
+  transition: all 0.2s ease-in-out;
 
-// Featured Projects //
-#featuredProjects {
-  max-width: 760px;
-  .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    a:link, a:visited, a:active {
-      color: $dark-gray;
-      font-weight: normal;
-      border-bottom: 0;
-      text-decoration: none;
+  .card-image {
+    background: url("../../images/card-hexagons.png") no-repeat center top;
+    height: 110px;
+    max-height: 150px;
+    overflow: hidden;
+
+    img {
+      @include border-top-radius($base-border-radius);
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
+      width: 35px;
+      margin: 3rem auto;
+      display: block;
+    }
+    .square { margin-top: 2rem; }
+  }
+
+  .card-header {
+    background-color: $card-header-background;
+    border-radius: $base-border-radius $base-border-radius 0 0;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2.5em;
+    padding: ($base-spacing / 3) ($base-spacing / 2);
+    transition: all 0.2s ease-in-out;
+    h3 {
+      color: $white;
+      margin-top: 0 !important;
     }
   }
 
-  .card {
-    border: $card-border;
-    border-radius: $base-border-radius;
-    box-shadow: 0 2px 4px darken($base-background-color, 10%);
-    cursor: pointer;
-    flex-basis: 15em;
-    flex-grow: 1;
-    margin: 0 $card-margin $base-spacing $card-margin;
-    position: relative;
-    transition: all 0.2s ease-in-out;
+  .card-copy {
+    background-color: $white;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    padding: ($base-spacing / 2) ($base-spacing / 2);
 
-    .card-image {
-      background: url("../../images/card-hexagons.png") no-repeat center top;
-      height: 110px;
-      max-height: 150px;
-      overflow: hidden;
-
-      img {
-        @include border-top-radius($base-border-radius);
-        opacity: 1;
-        transition: all 0.2s ease-in-out;
-        width: 35px;
-        margin: 3rem auto;
-        display: block;
-      }
-      .square { margin-top: 2rem; }
+    p {
+      margin: 0 0 ($base-spacing / 2);
     }
+  }
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+
+    img {
+      opacity: $card-image-hover-opacity;
+    }
+  }
+
+  &:active {
+    background-color: $card-background;
 
     .card-header {
-      background-color: $card-header-background;
-      border-radius: $base-border-radius $base-border-radius 0 0;
-      font-weight: bold;
-      text-align: center;
-      line-height: 2.5em;
-      padding: ($base-spacing / 3) ($base-spacing / 2);
-      transition: all 0.2s ease-in-out;
-      h3 { color: $white; }
-    }
-
-    .card-copy {
-      background-color: $white;
-      font-size: 0.9em;
-      line-height: 1.5em;
-      padding: ($base-spacing / 2) ($base-spacing / 2);
-
-      p {
-        margin: 0 0 ($base-spacing / 2);
-      }
-    }
-
-    &:focus,
-    &:hover {
-      cursor: pointer;
-
-      img {
-        opacity: $card-image-hover-opacity;
-      }
-    }
-
-    &:active {
       background-color: $card-background;
-
-      .card-header {
-        background-color: $card-background;
-      }
     }
   }
 }
+
+
+// Featured Projects //
+#featuredProjects { max-width: 760px; }
 .project {
   width: 350px;
   margin: .5rem .5rem 2rem;
@@ -432,7 +433,7 @@ form {
 
 //  Resume //
 .resume {
-  h2 { margin: 3rem 0; }
+  h2 { margin: 8rem 0 2rem; }
   h3 { margin-top: 5rem; }
   h3, h4 { text-align: center; }
   section { margin-top: 100px; }
