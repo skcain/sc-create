@@ -2853,16 +2853,65 @@ form {
 
 #featuredProjects {
   max-width: 760px; }
-  #featuredProjects a {
-    text-decoration: none; }
-  #featuredProjects a.marginChange .logoWrap {
-    padding: 1.8rem 0; }
-    #featuredProjects a.marginChange .logoWrap img {
-      width: 34px;
-      margin-top: .4rem; }
-    @media screen and (min-width: 53.75em) {
-      #featuredProjects a.marginChange .logoWrap {
-        padding: .8rem 0; } }
+  #featuredProjects .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    #featuredProjects .cards a:link, #featuredProjects .cards a:visited, #featuredProjects .cards a:active {
+      color: #333;
+      font-weight: normal;
+      border-bottom: 0;
+      text-decoration: none; }
+  #featuredProjects .card {
+    border: 1px solid #799299;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px #e6e6e6;
+    cursor: pointer;
+    flex-basis: 15em;
+    flex-grow: 1;
+    margin: 0 1em 1.5em 1em;
+    position: relative;
+    transition: all 0.2s ease-in-out; }
+    #featuredProjects .card .card-image {
+      background: url("../../images/card-hexagons.png") no-repeat center top;
+      height: 110px;
+      max-height: 150px;
+      overflow: hidden; }
+      #featuredProjects .card .card-image img {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
+        width: 35px;
+        margin: 3rem auto;
+        display: block; }
+      #featuredProjects .card .card-image .square {
+        margin-top: 2rem; }
+    #featuredProjects .card .card-header {
+      background-color: #CC3B6A;
+      border-radius: 3px 3px 0 0;
+      font-weight: bold;
+      text-align: center;
+      line-height: 2.5em;
+      padding: 0.5em 0.75em;
+      transition: all 0.2s ease-in-out; }
+      #featuredProjects .card .card-header h3 {
+        color: #ffffff; }
+    #featuredProjects .card .card-copy {
+      background-color: #ffffff;
+      font-size: 0.9em;
+      line-height: 1.5em;
+      padding: 0.75em 0.75em; }
+      #featuredProjects .card .card-copy p {
+        margin: 0 0 0.75em; }
+    #featuredProjects .card:focus, #featuredProjects .card:hover {
+      cursor: pointer; }
+      #featuredProjects .card:focus img, #featuredProjects .card:hover img {
+        opacity: 0.7; }
+    #featuredProjects .card:active {
+      background-color: #96aaaf; }
+      #featuredProjects .card:active .card-header {
+        background-color: #96aaaf; }
 
 .project {
   width: 350px;
