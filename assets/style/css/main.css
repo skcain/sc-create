@@ -2634,15 +2634,19 @@ section {
   margin: 0 auto;
   padding: 2rem; }
 
+#svg-bg {
+  margin-top: 10rem; }
+
 header {
-  margin: 62px 0 0 0;
+  max-width: 800px;
+  margin: 5rem auto;
   z-index: 10; }
   header::after {
     clear: both;
     content: "";
     display: table; }
   header h1 {
-    margin: 1.4em auto;
+    margin: 1.4rem auto;
     padding: 0 2rem; }
   header p {
     max-width: 700px;

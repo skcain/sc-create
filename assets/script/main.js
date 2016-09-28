@@ -1,40 +1,56 @@
+var s;
 function menuToggle(e){
   $("#js-centered-navigation-menu").toggleClass("show");
   $("#nav-open, #nav-close").toggle()
 }
 function dynamicHex() {
-  var  w = (window.innerWidth / 2) + 112.5;
-  var widthIncrease = 225;
-  var  svgns = "http://www.w3.org/2000/svg";
-  var  xlinkns = "http://www.w3.org/1999/xlink";
-  var  g = document.getElementById("hex-group");
-  for (i = 225; i < w; i += 225) {
-    var  useR = document.createElementNS(svgns, "use");
-    useR.setAttributeNS(xlinkns, "href", "#polygon");
-    useR.setAttribute("class", "polygon");
-    useR.setAttribute("x", i);
-    g.appendChild(useR);
-    var  useL = document.createElementNS(svgns, "use");
-    useL.setAttributeNS(xlinkns, "href", "#polygon");
-    useL.setAttribute("class", "polygon");
-    useL.setAttribute("x", '-' + i);
-    g.appendChild(useL);
-    var  useTopR = document.createElementNS(svgns, "use");
-    useTopR.setAttributeNS(xlinkns, "href", "#polygon");
-    useTopR.setAttribute("class", "polygon");
-    useTopR.setAttribute("x", i - 112.5);
-    useTopR.setAttribute("y", "-195");
-    g.appendChild(useTopR);
-    var  useTopL = document.createElementNS(svgns, "use");
-    useTopL.setAttributeNS(xlinkns, "href", "#polygon");
-    useTopL.setAttribute("class", "polygon");
-    useTopL.setAttribute("x", '-' + (i - 112.5));
-    useTopL.setAttribute("y", "-195");
-    g.appendChild(useTopL);
+      s = Snap("#svg-bg");
+  var hexGroup = s.select("#hex-group"),
+      poly = s.select("#poly"),
+      numPolys = ((window.innerWidth * 2) + 450) / 222.5;
+  for (i = 0; i <= numPolys; i++) {
+    hexGroup.prepend(poly.use().attr("fill", "#fff").transform("t-115, 70"));
+    /*.transform("t" + i + ", 70"));
+    hexGroup.append(poly.use().attr("fill", "#799299").transform("t-" + ( i + 230 ) + ", 70"));
+    hexGroup.append(poly.use().attr("fill", "#799299").transform("t" + ( i - 112 ) + ", -125"));
+    hexGroup.append(poly.use().attr("fill", "#799299").transform("t-" + ( i + 118 ) + ", -125"));*/
   }
+  return s;
 }
 $(window).on("load resize",function(e) {
   $("#js-centered-navigation-menu").removeClass("show");
   $("#nav-close").hide();
+});
+$( document ).ready(function() {
   dynamicHex();
+  var polygons = s.selectAll("use"),
+      xValPos = 110,
+      xValNeg = -340,
+      x2ValPos = -2.5,
+      x2ValNeg = -227.5,
+      polyValue = 0;
+  for (y = 0; y < polygons.length; y++) {
+    switch (polyValue){
+      case 0:
+        polygons[y].animate({ fill: "#c9d3d6", transform: "t" + xValPos + ", 70" }, 1000, mina.easeinout);
+        xValPos += 225;
+        polyValue++;
+        break;
+      case 1:
+        polygons[y].animate({ fill: "#c9d3d6", transform: "t" + xValNeg + ", 70" }, 1000, mina.easeinout);
+        xValNeg -= 225;
+        polyValue++;
+        break;
+      case 2:
+        polygons[y].animate({ fill: "#c9d3d6", transform: "t" + x2ValPos + ", -125" }, 1000, mina.easeinout);
+        x2ValPos += 225;
+        polyValue++;
+        break;
+      case 3:
+        polygons[y].animate({ fill: "#c9d3d6", transform: "t" + x2ValNeg + ", -125" }, 1000, mina.easeinout);
+        polyValue = 0;
+        x2ValNeg -= 225;
+        break;
+    }
+  }
 });
