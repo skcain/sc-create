@@ -13,6 +13,7 @@ $accent-color: #799299;
 $base-line-height: 1.5em !default;
 $base-spacing: 1.5em !default;
 $medium-screen: 40em !default;
+$large-screen: 53.75em !default;
 $serif: 'Lusitana', serif;
 $serif-2: 'Merriweather', serif;
 $sans-serif: 'Merriweather Sans', sans-serif;
@@ -48,6 +49,12 @@ $flex-box-top-colors:
   #E3D743,
   #CCC,
   #F6C05C;
+
+
+$footer-background: desaturate(darken($accent-color, 20%), 30%);
+$footer-color: white;
+$footer-link-color: $footer-color;
+$footer-disclaimer-color: transparentize($footer-color, 0.6);
 
 @import "bourbon/bourbon";
 @import "neat/neat";
@@ -202,7 +209,7 @@ body {
     color: $accent-color;
 
     @include media($medium-screen) {
-      font-size: 4.6em;
+      font-size: 4.4em;
     }
   }
 
@@ -234,10 +241,10 @@ body {
 
   h3 {
     font-family: $serif;
-    font-size: 1.4em;
+    font-size: 2.3em;
     font-weight: 400;
     line-height: 1.3em;
-    margin-bottom: 0.4em;
+    margin: 1em;
   }
 
   p.date {
@@ -364,6 +371,7 @@ body {
       &:last-of-type { border-right: 0; }
     }
     a {
+      font-size: 1.5em;
       color: $action-color;
       display: inline-block;
       outline: none;
@@ -384,56 +392,24 @@ body {
 }
 
 
-// Common Elements //
-form {
-  float: left;
-  margin: 0 1rem;
-}
-
-
 // Featured Projects //
-#featuredProjects { max-width: 760px; }
-.project {
-  width: 350px;
-  margin: .5rem .5rem 2rem;
-  background: url("../../images/card-hexagons.png") no-repeat center top;
-  background-size: 180%;
-  background-clip: content-box;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-
-  .logoWrap {
-    height: 75px;
-    margin: 1rem 0;
-    padding: 3rem 0;
-    background: url("../../images/activeHex.png") no-repeat center;
-    background-size: 48px;
-
-    img {
-      width: 40px;
-      margin: 0 auto;
-      display: block;
-    }
-    @include media ($large-screen) {
-      height: 56px;
-      padding: 2rem 0;
-    }
+#featuredProjects {
+  max-width: 800px;
+  margin: .5rem auto 2rem;
+  img {
+    width: 40px;
+    margin: 10px auto 0;
+    display: block;
   }
-  h3 {
-    text-align: center;
-    font-weight: bold;
-  }
+  .square { width: 30px; }
   p {
+    font-size: 1.4em;
+    line-height: 1.6em;
     text-align: center;
     font-weight: normal;
     color: $dark-gray;
-    padding: 0 2rem;
+    padding: 0;
     text-decoration: none;
-  }
-  @include media ($large-screen) {
-    float: left;
-    margin: .5rem;
   }
 }
 
@@ -551,4 +527,84 @@ form {
   }
 }
 
-//  Footer //
+
+// Footer //
+.footer {
+  background: $footer-background;
+  display: inline-block;
+  padding: $base-spacing;
+  width: 100%;
+  margin-top: 30px;
+
+  ul {
+    line-height: 1.5em;
+    margin: 0 0 1em 0;
+    padding: 0;
+
+    @include media($large-screen) {
+      float: left;
+      line-height: 1.8em;
+      margin-bottom: 0;
+      margin-left: 1em;
+    }
+  }
+
+  ul li {
+    list-style: none;
+    padding-right: 2em;
+
+    @include media($large-screen) {
+      display: inline;
+      text-align: left;
+    }
+  }
+
+  ul li a {
+    font-size: 1.5em;
+    color: $footer-link-color;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+
+  .footer-secondary-links {
+    @include media($large-screen) {
+      float: right;
+    }
+
+    ul.footer-social {
+      margin: 1em 0 0 0;
+
+      @include media($large-screen) {
+        float: right;
+        margin-top: 0;
+      }
+
+      li {
+        float: left;
+        font-size: 1em;
+        line-height: 0;
+        margin: 0;
+        padding-right: 0.7em;
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+
+      img {
+        height: 1.6em;
+        opacity: 0.7;
+        padding: 1px;
+
+        &:focus,
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
