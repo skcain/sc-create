@@ -2193,6 +2193,7 @@ html {
 
 .button-wrapper {
   padding: .5em 0 !important;
+  margin-bottom: 40px;
   text-align: center; }
 
 .basic-button,
@@ -2623,7 +2624,9 @@ html {
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: "Merriweather", serif;
+  text-align: left; }
 
 section {
   max-width: 800px;
@@ -2666,7 +2669,7 @@ header {
   .social-media li {
     width: 43px;
     height: 52px;
-    padding: 13px 1px 0 10px;
+    padding: 14px 1px 0 9px;
     float: left;
     background: url("../../images/inactiveHex.png") no-repeat center top;
     background-size: 44px; }
@@ -2709,107 +2712,106 @@ header {
   display: block; }
 
 .portfolio #hex-image {
-  padding-top: 9.5rem !important; }
+  padding-top: 15.5rem !important; }
 
-body {
+h1, h2, h3, p {
+  margin: 0; }
+
+hr {
+  border-bottom: 1px solid #E0E0E0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: 1.5em 0; }
+
+p {
+  color: #333;
+  line-height: 1.5em; }
+
+a {
+  color: #CC3B6A;
+  text-decoration: none; }
+
+.type {
+  border-bottom: 1px solid;
+  display: inline-block;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  margin-bottom: 2em;
+  padding: 0.3em 0;
+  text-align: left;
+  text-transform: uppercase; }
+
+h1 {
+  font-family: "Lusitana", serif;
+  font-size: 3.4em;
+  font-weight: 700;
+  margin-bottom: 1em;
+  padding: 0 1em;
+  text-align: center;
+  color: #799299; }
+  @media screen and (min-width: 40em) {
+    h1 {
+      font-size: 4.4em; } }
+
+h2 {
   font-family: "Merriweather", serif;
-  text-align: left; }
-  body h1, body h2, body h3, body p {
-    margin: 0; }
-  body hr {
-    border-bottom: 1px solid #E0E0E0;
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
-    margin: 1.5em 0; }
-  body p {
-    color: #333;
-    line-height: 1.5em; }
-  body a {
-    color: #CC3B6A;
-    text-decoration: none; }
-  body .type {
-    border-bottom: 1px solid;
-    display: inline-block;
+  font-size: 3em;
+  font-weight: 400;
+  line-height: 1em;
+  margin-bottom: 0.9em;
+  padding: 0 1em;
+  text-align: center;
+  color: #799299; }
+  @media screen and (min-width: 40em) {
+    h2 {
+      font-size: 4.2em; } }
+
+code {
+  background: #F7F7F7;
+  border-radius: 4.5px;
+  border: 1px solid #E0E0E0;
+  font-family: monaco;
+  font-size: 0.75em;
+  font-style: normal;
+  padding: 0.1em 0.4em;
+  white-space: nowrap; }
+
+h3 {
+  font-family: "Lusitana", serif;
+  font-size: 3.2em;
+  font-weight: 700;
+  line-height: 2.3em;
+  color: #799299; }
+
+h4 {
+  font-family: "Lusitana", serif;
+  font-size: 2em;
+  font-weight: 400;
+  text-align: center;
+  color: #799299;
+  margin: 0 0 1em 0; }
+
+p, li {
+  font-family: "Merriweather", serif;
+  font-size: 1.8em;
+  margin: 0 auto .5em; }
+  p span, li span {
     font-family: "Merriweather Sans", sans-serif;
-    font-size: 0.7em;
-    font-weight: 700;
-    margin-bottom: 2em;
-    padding: 0.3em 0;
-    text-align: left;
-    text-transform: uppercase; }
-  body h1 {
-    font-family: "Lusitana", serif;
-    font-size: 3.4em;
-    font-weight: 700;
-    margin-bottom: 1em;
-    padding: 0 1em;
-    text-align: center;
-    color: #799299; }
-    @media screen and (min-width: 40em) {
-      body h1 {
-        font-size: 4.4em; } }
-  body h2 {
-    font-family: "Merriweather", serif;
-    font-size: 3em;
-    font-weight: 400;
-    line-height: 1em;
-    margin-bottom: 0.9em;
-    padding: 0 1em;
-    text-align: center;
-    color: #799299; }
-    @media screen and (min-width: 40em) {
-      body h2 {
-        font-size: 4.2em; } }
-  body code {
-    background: #F7F7F7;
-    border-radius: 4.5px;
-    border: 1px solid #E0E0E0;
-    font-family: monaco;
-    font-size: 0.75em;
-    font-style: normal;
-    padding: 0.1em 0.4em;
-    white-space: nowrap; }
-  body h3 {
-    font-family: "Lusitana", serif;
-    font-size: 2.3em;
-    font-weight: 400;
-    line-height: 1.3em;
-    margin: 1em; }
-  body p.date {
-    color: rgba(51, 51, 51, 0.4);
-    font-family: "Merriweather", serif;
-    font-size: 0.9em;
-    font-style: italic;
-    margin-bottom: 0.3em; }
-  body p {
-    font-family: "Merriweather", serif;
-    font-size: 1.8em;
-    line-height: 1.8em;
-    margin: 0 auto .5em; }
-    body p span {
-      font-family: "Merriweather Sans", sans-serif;
-      font-weight: 700; }
-  body a.read-more {
-    display: inline-block;
-    font-family: "Merriweather Sans", sans-serif;
-    font-size: 0.8em;
-    font-weight: 700;
-    margin-left: 0.2em;
-    position: relative;
-    text-transform: uppercase; }
-    body a.read-more span {
-      font-family: "Lusitana", serif;
-      font-size: 1.5em;
-      font-style: normal;
-      position: absolute;
-      right: -12px;
-      top: -1px; }
-  body hr {
-    width: 3em; }
-  body p.author {
-    font-family: "Merriweather", serif;
-    font-style: italic; }
+    font-weight: 700; }
+
+p {
+  line-height: 1.8em; }
+
+small {
+  font-size: 1.4em; }
+
+.centered {
+  text-align: center; }
+
+hr {
+  width: 3em; }
 
 .centered-navigation {
   background-color: #ffffff;
@@ -2881,7 +2883,6 @@ body {
         .centered-navigation ul li.nav-link:last-of-type {
           border-right: 0; } }
     .centered-navigation ul li.nav-link a {
-      font-size: 1.5em;
       color: #CC3B6A;
       display: inline-block;
       outline: none;
@@ -2921,10 +2922,6 @@ body {
 
 #project-container {
   margin-top: 4rem; }
-  #project-container .projectLink {
-    text-align: center;
-    margin: 0 auto;
-    display: block; }
 
 .resume h2 {
   margin: 8rem 0 2rem; }
@@ -3004,6 +3001,10 @@ body {
       .flex-boxes .flex-box .flex-image img {
         display: block;
         width: 100%; }
+    .flex-boxes .flex-box h3 {
+      font-size: 2.2em;
+      line-height: 1.5em;
+      margin: 1em; }
     .flex-boxes .flex-box a:link, .flex-boxes .flex-box a:active, .flex-boxes .flex-box a:visited {
       color: #333;
       line-height: 1.5em;
@@ -3033,7 +3034,6 @@ body {
         display: inline;
         text-align: left; } }
   .footer ul li a {
-    font-size: 1.5em;
     color: white;
     text-decoration: none; }
     .footer ul li a:focus, .footer ul li a:hover {
