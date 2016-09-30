@@ -10,10 +10,6 @@ function dynamicHex() {
       numPolys = ((window.innerWidth * 2) + 450) / 222.5;
   for (i = 0; i <= numPolys; i++) {
     hexGroup.prepend(poly.use().attr("fill", "#fff").transform("t-115, 70"));
-    /*.transform("t" + i + ", 70"));
-    hexGroup.append(poly.use().attr("fill", "#799299").transform("t-" + ( i + 230 ) + ", 70"));
-    hexGroup.append(poly.use().attr("fill", "#799299").transform("t" + ( i - 112 ) + ", -125"));
-    hexGroup.append(poly.use().attr("fill", "#799299").transform("t-" + ( i + 118 ) + ", -125"));*/
   }
   return s;
 }
