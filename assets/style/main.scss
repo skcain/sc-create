@@ -10,10 +10,16 @@ $action-color: #CC3B6A;
 $action-color-darker: #992C50;
 $accent-color: #799299;
 
+$base-line-height: 1.5em !default;
+$base-spacing: 1.5em !default;
+$medium-screen: 40em !default;
+$large-screen: 53.75em !default;
+$serif: 'Lusitana', serif;
+$serif-2: 'Merriweather', serif;
+$sans-serif: 'Merriweather Sans', sans-serif;
+
 $base-border-radius: 3px !default;
 $base-background-color: $white !default;
-$base-spacing: 1.5em !default;
-$base-font-color: $dark-gray !default;
 
 $card-border-color: $accent-color;
 $card-border: 1px solid $card-border-color;
@@ -29,6 +35,26 @@ $centered-navigation-height: 60px;
 $centered-navigation-item-padding: 1em;
 $centered-navigation-item-nudge: 2.2em;
 $horizontal-bar-mode: $large-screen;
+
+$flex-box-border-color: $light-gray;
+$flex-box-border: 1px solid $flex-box-border-color;
+$flex-box-background: lighten($light-gray, 10%);
+$flex-box-gutter: 0.4em;
+$flex-box-width: 18em;
+$flex-box-color: transparentize($base-font-color, 0.3);
+$flex-box-top-colors:
+  tomato,
+  #72BFBF,
+  #92B1E3,
+  #E3D743,
+  #CCC,
+  #F6C05C;
+
+
+$footer-background: desaturate(darken($accent-color, 20%), 30%);
+$footer-color: white;
+$footer-link-color: $footer-color;
+$footer-disclaimer-color: transparentize($footer-color, 0.6);
 
 @import "bourbon/bourbon";
 @import "neat/neat";
@@ -49,10 +75,8 @@ html { font-size: 62.5%; }
 body {
   margin: 0;
   padding: 0;
-  font-family: $body-copy;
-  font-size: 1.8rem;
+  font-family: $serif-2;
   text-align: left;
-  color: $base-font-color;
 }
 section {
   max-width: 800px;
@@ -65,11 +89,6 @@ header {
   margin: 5rem auto;
   z-index: 10;
   @include clearfix;
-
-  h1 {
-    margin: 1.4rem auto;
-    padding: 0 2rem;
-  }
   p {
     max-width: 700px;
     text-align: center;
@@ -79,6 +98,7 @@ header {
 }
 .social-media {
   @include clearfix;
+  margin-bottom: 1em;
 
   ul {
     width: 215px;
@@ -91,11 +111,11 @@ header {
   li {
     width: 43px;
     height: 52px;
-    padding: 13px 1px 0 10px;
+    padding: 14px 1px 0 9px;
     float: left;
     background: url("../../images/inactiveHex.png") no-repeat center top;
     background-size: 44px;
-    .fa { font-size: 1.6em; }
+    .fa { font-size: 2.6em; }
   }
   .activeHex {
     background: url("../../images/activeHex.png") no-repeat center top;
@@ -139,51 +159,118 @@ header {
   margin: 0 auto;
   display: block;
 }
-.portfolio #hex-image { padding-top: 9.5rem !important; }
+.portfolio #hex-image { padding-top: 15.5rem !important; }
 
 
 // Typography //
-h1, h2, h3, h4 {
-  font-family: $header-copy;
-  color: $accent-color;
-}
-h1 {
-  font-weight: normal;
-  font-size: 3.4rem;
-  text-align: center;
-
-  @include media ($large-screen) { font-size: 3.2rem; }
-}
-h2 {
-  font-weight: normal;
-  font-size: 4rem;
-  text-align: center;
-
-  @include media ($large-screen) { font-size: 5rem; }
-}
-h3 {
-  font-weight: normal;
-  font-size: 2.5rem;
-  margin: .5rem 0;
-
-  @include media ($large-screen) { font-size: 2.8rem; }
-}
-h4 {
-  font-weight: bold;
-  font-size: 2rem;
-}
-h5 {
-  font-weight: bold;
-  font-size: 1.8rem;
+h1, h2, h3, p {
   margin: 0;
 }
-.fa { color: $accent-color; }
-a:link, a:visited, a:active {
-  font-weight: bold;
-  color: $action-color;
+
+hr {
+  border-bottom: 1px solid $light-gray;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
 }
-a:hover { color: $dark-gray; }
-.center { text-align: center; }
+
+p {
+  color: $base-font-color;
+  line-height: $base-line-height;
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+}
+
+.type {
+  border-bottom: 1px solid;
+  display: inline-block;
+  font-family: $sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  margin-bottom: 2em;
+  padding: 0.3em 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: $serif;
+  font-size: 3.4em;
+  font-weight: 700;
+  margin-bottom: 1em;
+  padding: 0 1em;
+  text-align: center;
+  color: $accent-color;
+
+  @include media($medium-screen) {
+    font-size: 4.4em;
+  }
+}
+
+h2 {
+  font-family: $serif-2;
+  font-size: 3em;
+  font-weight: 400;
+  line-height: 1em;
+  margin-bottom: 0.9em;
+  padding: 0 1em;
+  text-align: center;
+  color: $accent-color;
+
+  @include media($medium-screen) {
+    font-size: 4.2em;
+  }
+}
+
+code {
+  background: #F7F7F7;
+  border-radius: $base-border-radius * 1.5;
+  border: 1px solid #E0E0E0;
+  font-family: monaco;
+  font-size: 0.75em;
+  font-style: normal;
+  padding: 0.1em 0.4em;
+  white-space: nowrap;
+}
+
+h3 {
+  font-family: $serif;
+  font-size: 3.2em;
+  font-weight: 700;
+  line-height: 2.3em;
+  color: $accent-color;
+}
+
+h4 {
+  font-family: $serif;
+  font-size: 2em;
+  font-weight: 400;
+  text-align: center;
+  color: $accent-color;
+  margin: 0 0 1em 0;
+}
+
+p, li {
+  font-family: $serif-2;
+  font-size: 1.8em;
+  margin: 0 auto .5em;
+
+  span {
+    font-family: $sans-serif;
+    font-weight: 700;
+  }
+}
+p { line-height: 1.8em; }
+small { font-size: 1.4em; }
+.centered { text-align: center; }
+
+hr {
+  width: 3em;
+}
 
 
 // Nav //
@@ -280,139 +367,24 @@ a:hover { color: $dark-gray; }
 }
 
 
-// Common Elements //
-form {
-  float: left;
-  margin: 0 1rem;
-}
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  a:link, a:visited, a:active {
-    color: $dark-gray;
-    font-weight: normal;
-    border-bottom: 0;
-    text-decoration: none;
-  }
-}
-
-.card {
-  border: $card-border;
-  border-radius: $base-border-radius;
-  box-shadow: 0 2px 4px darken($base-background-color, 10%);
-  cursor: pointer;
-  flex-basis: 15em;
-  flex-grow: 1;
-  margin: 0 $card-margin $base-spacing $card-margin;
-  position: relative;
-  transition: all 0.2s ease-in-out;
-
-  .card-image {
-    background: url("../../images/card-hexagons.png") no-repeat center top;
-    height: 110px;
-    max-height: 150px;
-    overflow: hidden;
-
-    img {
-      @include border-top-radius($base-border-radius);
-      opacity: 1;
-      transition: all 0.2s ease-in-out;
-      width: 35px;
-      margin: 3rem auto;
-      display: block;
-    }
-    .square { margin-top: 2rem; }
-  }
-
-  .card-header {
-    background-color: $card-header-background;
-    border-radius: $base-border-radius $base-border-radius 0 0;
-    font-weight: bold;
-    text-align: center;
-    line-height: 2.5em;
-    padding: ($base-spacing / 3) ($base-spacing / 2);
-    transition: all 0.2s ease-in-out;
-    h3 {
-      color: $white;
-      margin-top: 0 !important;
-    }
-  }
-
-  .card-copy {
-    background-color: $white;
-    font-size: 0.9em;
-    line-height: 1.5em;
-    padding: ($base-spacing / 2) ($base-spacing / 2);
-
-    p {
-      margin: 0 0 ($base-spacing / 2);
-    }
-  }
-
-  &:focus,
-  &:hover {
-    cursor: pointer;
-
-    img {
-      opacity: $card-image-hover-opacity;
-    }
-  }
-
-  &:active {
-    background-color: $card-background;
-
-    .card-header {
-      background-color: $card-background;
-    }
-  }
-  .project { height: 220px; }
-}
-
-
 // Featured Projects //
-#featuredProjects { max-width: 760px; }
-.project {
-  width: 350px;
-  margin: .5rem .5rem 2rem;
-  background: url("../../images/card-hexagons.png") no-repeat center top;
-  background-size: 180%;
-  background-clip: content-box;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-
-  .logoWrap {
-    height: 75px;
-    margin: 1rem 0;
-    padding: 3rem 0;
-    background: url("../../images/activeHex.png") no-repeat center;
-    background-size: 48px;
-
-    img {
-      width: 40px;
-      margin: 0 auto;
-      display: block;
-    }
-    @include media ($large-screen) {
-      height: 56px;
-      padding: 2rem 0;
-    }
+#featuredProjects {
+  max-width: 800px;
+  margin: .5rem auto 2rem;
+  img {
+    width: 40px;
+    margin: 10px auto 0;
+    display: block;
   }
-  h3 {
-    text-align: center;
-    font-weight: bold;
-  }
+  .square { width: 30px; }
   p {
+    font-size: 1.4em;
+    line-height: 1.6em;
     text-align: center;
     font-weight: normal;
     color: $dark-gray;
-    padding: 0 2rem;
+    padding: 0;
     text-decoration: none;
-  }
-  @include media ($large-screen) {
-    float: left;
-    margin: .5rem;
   }
 }
 
@@ -424,14 +396,7 @@ form {
 }
 
 // Project Containers //
-#project-container {
-  margin-top: 4rem;
-  .projectLink {
-    text-align: center;
-    margin: 0 auto;
-    display: block;
-  }
-}
+#project-container { margin-top: 4rem; }
 
 
 //  Resume //
@@ -489,4 +454,129 @@ form {
   }
 }
 
-//  Footer //
+.flex-boxes {
+  @include clearfix;
+  align-items: stretch;
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+
+  .flex-box { 
+    align-self: stretch;
+    background: $flex-box-background;
+    border: 1px solid $light-gray;
+    box-shadow: inset 0 0 1px $flex-box-border-color, 0 2px 4px darken($base-background-color, 10%);
+    display: block;
+    flex: 3 3 10em;
+    margin: $flex-box-gutter;
+    padding: 1rem;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+
+    .flex-image {
+      width: 100%;
+      height: 150px;
+      overflow: hidden;
+      display: block;
+      margin: 0 auto 1em;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    h3 {
+      font-size: 2.2em;
+      line-height: 1.5em;
+      margin: 1em;
+    }
+    a:link, a:active, a:visited{
+      color: $dark-gray;
+      line-height: 1.5em;
+      margin: auto;
+    }
+  }
+}
+
+
+// Footer //
+.footer {
+  background: $footer-background;
+  display: inline-block;
+  padding: $base-spacing;
+  width: 100%;
+  margin-top: 30px;
+
+  ul {
+    line-height: 1.5em;
+    margin: 0 0 1em 0;
+    padding: 0;
+
+    @include media($large-screen) {
+      float: left;
+      line-height: 1.8em;
+      margin-bottom: 0;
+      margin-left: 1em;
+    }
+  }
+
+  ul li {
+    list-style: none;
+    padding-right: 2em;
+
+    @include media($large-screen) {
+      display: inline;
+      text-align: left;
+    }
+  }
+
+  ul li a {
+    color: $footer-link-color;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+
+  .footer-secondary-links {
+    @include media($large-screen) {
+      float: right;
+    }
+
+    ul.footer-social {
+      margin: 1em 0 0 0;
+
+      @include media($large-screen) {
+        float: right;
+        margin-top: 0;
+      }
+
+      li {
+        float: left;
+        font-size: 1em;
+        line-height: 0;
+        margin: 0;
+        padding-right: 0.7em;
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+
+      img {
+        height: 1.6em;
+        opacity: 0.7;
+        padding: 1px;
+
+        &:focus,
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
