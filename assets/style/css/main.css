@@ -631,7 +631,7 @@ hr {
   border-bottom: 2px solid #CC3B6A;
   min-height: 60px;
   width: 100%;
-  z-index: 9999;
+  z-index: 7000;
   position: fixed;
   top: 0; }
   .centered-navigation .in-progress {
