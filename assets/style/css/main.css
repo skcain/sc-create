@@ -744,6 +744,8 @@ hr {
   text-align: center; }
 .resume section {
   margin-top: 100px; }
+.resume .flex-box {
+  max-width: 350px; }
 .resume #fellow img, .resume #vis img, .resume #intern img {
   max-width: 65px;
   margin: 0 auto;
