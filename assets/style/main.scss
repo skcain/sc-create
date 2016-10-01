@@ -216,7 +216,7 @@ h2 {
   font-weight: 400;
   line-height: 1em;
   margin-bottom: 0.9em;
-  padding: 0 1em;
+  padding: 0 .5em;
   text-align: center;
   color: $accent-color;
 
@@ -246,11 +246,11 @@ h3 {
 
 h4 {
   font-family: $serif;
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: 400;
   text-align: center;
   color: $accent-color;
-  margin: 0 0 1em 0;
+  margin: .5em 0;
 }
 
 p, li {
@@ -300,6 +300,7 @@ hr {
     text-decoration: none;
     text-align: center;
     font-weight: bold;
+    font-size: 1.8em;
 
     @include media ($horizontal-bar-mode) { display: none; }
     &:focus, &:hover { color: $base-font-color; }
@@ -404,7 +405,7 @@ hr {
   h3 { margin-top: 5rem; }
   h3, h4 { text-align: center; }
   section { margin-top: 100px; }
-  .flex-box { max-width: 350px; }
+  .flex-box { h3 { margin-top: 0; } }
   #fellow, #vis, #intern {
     img {
       max-width: 65px;
@@ -421,7 +422,6 @@ hr {
     background: url("../../images/resume-fellow.png") no-repeat center top;
     background-size: 100%;
     background-clip: content-box;
-    h3 { margin-top: 7rem; }
     img { padding-top: 15rem; }
   }
   #vis {
@@ -464,6 +464,7 @@ hr {
   text-align: center;
 
   .flex-box {
+    max-width: 350px;
     align-self: stretch;
     background: $flex-box-background;
     border: 1px solid $light-gray;
