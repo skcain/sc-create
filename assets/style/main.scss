@@ -58,7 +58,6 @@ $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
 @import "bourbon/bourbon";
 @import "neat/neat";
-@import "font-awesome";
 @import "buttons";
 
 
@@ -279,7 +278,7 @@ hr {
   border-bottom: 2px solid $action-color;
   min-height: $centered-navigation-height;
   width: 100%;
-  z-index: 9999;
+  z-index: 7000;
   position: fixed;
   top: 0;
 
@@ -405,6 +404,7 @@ hr {
   h3 { margin-top: 5rem; }
   h3, h4 { text-align: center; }
   section { margin-top: 100px; }
+  .flex-box { max-width: 350px; }
   #fellow, #vis, #intern {
     img {
       max-width: 65px;
@@ -463,7 +463,7 @@ hr {
   justify-content: center;
   text-align: center;
 
-  .flex-box { 
+  .flex-box {
     align-self: stretch;
     background: $flex-box-background;
     border: 1px solid $light-gray;
@@ -543,10 +543,6 @@ hr {
   }
 
   .footer-secondary-links {
-    @include media($large-screen) {
-      float: right;
-    }
-
     ul.footer-social {
       margin: 1em 0 0 0;
 
@@ -560,7 +556,7 @@ hr {
         font-size: 1em;
         line-height: 0;
         margin: 0;
-        padding-right: 0.7em;
+        padding-right: 2em;
 
         &:last-child {
           padding-right: 0;

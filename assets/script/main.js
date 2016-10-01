@@ -18,35 +18,37 @@ $(window).on("load resize",function(e) {
   $("#nav-close").hide();
 });
 $( document ).ready(function() {
-  dynamicHex();
-  var polygons = s.selectAll("use"),
-      xValPos = 110,
-      xValNeg = -340,
-      x2ValPos = -2.5,
-      x2ValNeg = -227.5,
-      polyValue = 0;
-  for (y = 0; y < polygons.length; y++) {
-    switch (polyValue){
-      case 0:
-        polygons[y].animate({ fill: "#c9d3d6", transform: "t" + xValPos + ", 70" }, 1000, mina.easeinout);
-        xValPos += 225;
-        polyValue++;
-        break;
-      case 1:
-        polygons[y].animate({ fill: "#c9d3d6", transform: "t" + xValNeg + ", 70" }, 1000, mina.easeinout);
-        xValNeg -= 225;
-        polyValue++;
-        break;
-      case 2:
-        polygons[y].animate({ fill: "#c9d3d6", transform: "t" + x2ValPos + ", -125" }, 1000, mina.easeinout);
-        x2ValPos += 225;
-        polyValue++;
-        break;
-      case 3:
-        polygons[y].animate({ fill: "#c9d3d6", transform: "t" + x2ValNeg + ", -125" }, 1000, mina.easeinout);
+  if($("body#primary").length !== 0){
+    dynamicHex();
+    var polygons = s.selectAll("use"),
+        xValPos = 110,
+        xValNeg = -340,
+        x2ValPos = -2.5,
+        x2ValNeg = -227.5,
         polyValue = 0;
-        x2ValNeg -= 225;
-        break;
+    for (y = 0; y < polygons.length; y++) {
+      switch (polyValue){
+        case 0:
+          polygons[y].animate({ fill: "#c9d3d6", transform: "t" + xValPos + ", 70" }, 1000, mina.easeinout);
+          xValPos += 225;
+          polyValue++;
+          break;
+        case 1:
+          polygons[y].animate({ fill: "#c9d3d6", transform: "t" + xValNeg + ", 70" }, 1000, mina.easeinout);
+          xValNeg -= 225;
+          polyValue++;
+          break;
+        case 2:
+          polygons[y].animate({ fill: "#c9d3d6", transform: "t" + x2ValPos + ", -125" }, 1000, mina.easeinout);
+          x2ValPos += 225;
+          polyValue++;
+          break;
+        case 3:
+          polygons[y].animate({ fill: "#c9d3d6", transform: "t" + x2ValNeg + ", -125" }, 1000, mina.easeinout);
+          polyValue = 0;
+          x2ValNeg -= 225;
+          break;
+      }
     }
   }
 });
