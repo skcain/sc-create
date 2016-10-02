@@ -78,7 +78,6 @@ section {
   margin: 0 auto;
   padding: 2rem;
 }
-#svg-bg { margin-top: 6rem; }
 header {
   max-width: 800px;
   margin: 3rem auto;
@@ -95,29 +94,9 @@ header {
   width: 190.4px;
   margin: 2em auto 0;
 }
-#secondary {
-  .hexBG{
-    height: 250px;
-    background: url("../../images/sub-hexagons.png") no-repeat center bottom;
-    background-size: cover;
-    background-clip: content-box;
-  }
-  #hex-image {
-    max-width: 65px;
-    padding-top: 12rem;
-  }
+#primary {
+  #svg-bg { margin-top: 6rem; }
 }
-.hexBG{
-  width: 100%;
-  position: absolute;
-  top: 0;
-  z-index: -1;
-}
-#hex-image {
-  margin: 0 auto;
-  display: block;
-}
-.portfolio #hex-image { padding-top: 15.5rem !important; }
 
 
 // Typography //
@@ -342,9 +321,6 @@ hr {
   max-width: 800px;
   margin: 0 auto;
 }
-
-// Project Containers //
-#project-container { margin-top: 4rem; }
 
 
 //  Resume //

@@ -10,6 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="assets/script/snap.svg-min.js"></script>
   <script src ="assets/script/main.js"></script>
 
   <link href='http://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
@@ -44,8 +45,18 @@
       <a href="javascript:void(0)" id="nav-close" class="centered-navigation-mobile-menu" onclick="menuToggle()">Close Menu</a>
     </div>
   </div>
-  <div class="hexBG"></div>
-  <img id="hex-image" src="assets/images/cfa-logo.png" alt="Code for America logo"/>
+  <svg id="svg-bg" width="100%" height="230px" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" version="1.1">
+    <defs>
+      <polygon id="poly" points="96.9,84.5 49.3,112 1.6,84.5 1.6,29.5 49.3,2 96.9,29.5"></polygon>
+    </defs>
+    <title>Logo and hexagon pattern</title>
+    <svg x="50%" overflow="visible" id="hex-group">
+      <a href="http://www.codeforamerica.org" title="Code for America website" target="_blank">
+        <polygon fill="#c9d3d6" points="96.9,84.5 49.3,112 1.6,84.5 1.6,29.5 49.3,2 96.9,29.5" transform="matrix(1,0,0,1,-55,110)"></polygon>
+        <image height="75" width="75" x="11" y="20" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/cfa-logo.png" transform="matrix(1,0,0,1,-55,110)"></image>
+      </a>
+    </svg>
+  </svg>
   <section id="project-container">
     <div class="button-wrapper">
       <a href="index.html#featuredProjects" title="Featured Projects" class="basic-button basic-button-outline center">Other Featured Projects</a>

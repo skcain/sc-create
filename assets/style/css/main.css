@@ -353,9 +353,6 @@ section {
   margin: 0 auto;
   padding: 2rem; }
 
-#svg-bg {
-  margin-top: 6rem; }
-
 header {
   max-width: 800px;
   margin: 3rem auto;
@@ -377,27 +374,8 @@ header {
     content: "";
     display: table; }
 
-#secondary .hexBG {
-  height: 250px;
-  background: url("../../images/sub-hexagons.png") no-repeat center bottom;
-  background-size: cover;
-  background-clip: content-box; }
-#secondary #hex-image {
-  max-width: 65px;
-  padding-top: 12rem; }
-
-.hexBG {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  z-index: -1; }
-
-#hex-image {
-  margin: 0 auto;
-  display: block; }
-
-.portfolio #hex-image {
-  padding-top: 15.5rem !important; }
+#primary #svg-bg {
+  margin-top: 6rem; }
 
 h1, h2, h3, p {
   margin: 0; }
@@ -599,9 +577,6 @@ hr {
 #process {
   max-width: 800px;
   margin: 0 auto; }
-
-#project-container {
-  margin-top: 4rem; }
 
 .resume h2 {
   margin: 8rem 0 2rem; }
