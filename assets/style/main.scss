@@ -85,19 +85,19 @@ section {
 #svg-bg { margin-top: 10rem; }
 header {
   max-width: 800px;
-  margin: 5rem auto;
+  margin: 3rem auto;
   z-index: 10;
   @include clearfix;
   p {
-    max-width: 700px;
     text-align: center;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 }
 .social-media {
   @include clearfix;
-  margin-bottom: 1em;
+  width: 190.4px;
+  margin: 0 auto 1em;
 
   ul {
     width: 215px;
@@ -200,7 +200,7 @@ h1 {
   font-family: $serif;
   font-size: 3.4em;
   font-weight: 700;
-  margin-bottom: 1em;
+  margin-bottom: .2em;
   padding: 0 1em;
   text-align: center;
   color: $accent-color;
@@ -263,7 +263,7 @@ p, li {
     font-weight: 700;
   }
 }
-p { line-height: 1.8em; }
+p { line-height: 1.6em; }
 small { font-size: 1.4em; }
 .centered { text-align: center; }
 
@@ -508,7 +508,7 @@ hr {
   display: inline-block;
   padding: $base-spacing;
   width: 100%;
-  margin-top: 30px;
+  margin: 30px 0 0;
 
   ul {
     line-height: 1.5em;

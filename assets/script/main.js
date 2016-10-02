@@ -50,5 +50,13 @@ $( document ).ready(function() {
           break;
       }
     }
+    var social = Snap("#social-header"),
+        linkedin = social.selectAll("#linkedin"),
+        github = social.selectAll("#github"),
+        instagram = social.selectAll("#instagram");
+    $(linkedin).hover(function(){
+      console.log("gi");
+      $(this).select(path).attr("fill", "black");
+    });
   }
 });
