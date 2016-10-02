@@ -14,6 +14,7 @@ $accent-color-light: #c9d3d6;
 
 $base-line-height: 1.5em !default;
 $base-spacing: 1.5em !default;
+$small-screen: 30em !default;
 $medium-screen: 40em !default;
 $large-screen: 53.75em !default;
 $serif: 'Lusitana', serif;
@@ -408,6 +409,9 @@ hr {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
+  @include media($small-screen) {
+    width: 100%;
+  }
 
   .flex-box {
     max-width: 350px;
@@ -442,7 +446,7 @@ hr {
     a:link, a:active, a:visited{
       color: $dark-gray;
       line-height: 1.5em;
-      margin: auto;
+      margin: 0 auto;
     }
   }
 }
