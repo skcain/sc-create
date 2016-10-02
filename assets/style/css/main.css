@@ -579,7 +579,7 @@ hr {
   margin: 0 auto; }
 
 .resume h2 {
-  margin: 8rem 0 2rem; }
+  margin: 0 0 2rem; }
 .resume h3 {
   margin-top: 5rem; }
 .resume h3, .resume h4 {
@@ -614,7 +614,7 @@ hr {
   margin-top: 4rem; }
 
 .about {
-  margin-top: 100px; }
+  margin-top: 8em; }
 
 .projects {
   max-width: 760px;
