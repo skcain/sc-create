@@ -587,6 +587,32 @@ hr {
     #featuredProjects .process-images a:last-of-type img {
       margin: 0 0 0 2%; }
 
+.expander {
+  width: 100%;
+  margin: 0 auto; }
+  .expander .expander-trigger {
+    color: #CC3B6A;
+    cursor: pointer;
+    display: block;
+    font-size: 1.8em;
+    border-top: 2px solid #CC3B6A;
+    margin-bottom: 1.8em;
+    padding: .5em 0;
+    text-align: center;
+    text-decoration: none;
+    user-select: none; }
+    .expander .expander-trigger::before {
+      font-size: 0.7em;
+      margin-right: 0.5em; }
+  .expander .expander-content {
+    height: auto;
+    overflow: hidden; }
+    .expander .expander-content p {
+      color: #333;
+      line-height: 1.5em; }
+  .expander .expander-hidden {
+    height: 0; }
+
 #process {
   max-width: 800px;
   margin: 0 auto; }

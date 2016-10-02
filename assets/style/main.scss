@@ -44,13 +44,11 @@ $flex-box-background: lighten($light-gray, 10%);
 $flex-box-gutter: 0.4em;
 $flex-box-width: 18em;
 $flex-box-color: transparentize($base-font-color, 0.3);
-$flex-box-top-colors:
-  tomato,
-  #72BFBF,
-  #92B1E3,
-  #E3D743,
-  #CCC,
-  #F6C05C;
+
+$expander-arrow-width: 0.7em;
+$expander-toggle-size: 1.8em;
+$expander-toggle-arrow-size: $expander-toggle-size;
+$expander-toggle-margin: 1em;
 
 @import "bourbon/bourbon";
 @import "neat/neat";
@@ -328,6 +326,38 @@ hr {
     a:first-of-type img { margin: 0 2% 0 0; }
     a:last-of-type img { margin: 0 0 0 2%; }
   }
+}
+.expander {
+  width: 100%;
+  margin: 0 auto;
+
+  .expander-trigger {
+    color: $action-color;
+    cursor: pointer;
+    display: block;
+    font-size: $expander-toggle-size;
+    border-top: 2px solid $action-color;
+    margin-bottom: $expander-toggle-size;
+    padding: .5em 0;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+
+    &::before {
+      font-size: $expander-arrow-width;
+      margin-right: 0.5em;
+    }
+  }
+
+  .expander-content {
+    height: auto;
+    overflow: hidden;
+    p {
+      color: $base-font-color;
+      line-height: $base-line-height;
+    }
+  }
+  .expander-hidden { height: 0; }
 }
 
 
