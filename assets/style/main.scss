@@ -79,11 +79,11 @@ section {
   padding: 2rem;
 }
 header {
-  max-width: 800px;
   margin: 3rem auto;
   z-index: 10;
   @include clearfix;
   p {
+    max-width: 800px;
     text-align: center;
     margin: 0 auto;
     padding: 0 1rem;
@@ -145,22 +145,23 @@ h1 {
   color: $accent-color;
 
   @include media($medium-screen) {
-    font-size: 4.4em;
+    font-size: 5.5em;
   }
 }
 
 h2 {
   font-family: $serif-2;
-  font-size: 3em;
+  font-size: 2.4em;
   font-weight: 400;
-  line-height: 1em;
-  margin-bottom: 0.9em;
+  line-height: 1.3em;
+  margin-bottom: 0.2em;
   padding: 0 .5em;
   text-align: center;
   color: $accent-color;
 
   @include media($medium-screen) {
-    font-size: 4.2em;
+    font-size: 4em;
+    line-height: 1.4em;
   }
 }
 
@@ -179,7 +180,7 @@ h3 {
   font-family: $serif;
   font-size: 3.2em;
   font-weight: 700;
-  line-height: 1.3em;
+  line-height: 1.8em;
   color: $accent-color;
 }
 
@@ -296,23 +297,37 @@ hr {
 // Featured Projects //
 #featuredProjects {
   max-width: 800px;
-  margin: .5rem auto 2rem;
-  img {
-    width: 80px;
-    margin: 10px auto 0;
-    display: block;
-  }
-  .square { width: 50px; }
-  p {
+  margin: 8rem auto 2rem;
+  .flex-box {
+    min-width:250px;
+    p {
+    text-align: center;
     font-size: 1.4em;
     line-height: 1.6em;
-    text-align: center;
     font-weight: normal;
     color: $dark-gray;
     padding: 0;
     text-decoration: none;
+    }
+    img {
+      width: 80px;
+      margin: 10px auto 0;
+      display: block;
+    }
+    .square { width: 50px; }
   }
-  .flex-box { min-width:250px; }
+  .process-images {
+    margin: 2em 0;
+    height: 150px;
+    overflow: hidden;
+    img {
+      width: 30%;
+      float: left;
+      margin: 0 2%;
+    }
+    a:first-of-type img { margin: 0 2% 0 0; }
+    a:last-of-type img { margin: 0 0 0 2%; }
+  }
 }
 
 

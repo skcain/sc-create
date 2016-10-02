@@ -354,7 +354,6 @@ section {
   padding: 2rem; }
 
 header {
-  max-width: 800px;
   margin: 3rem auto;
   z-index: 10; }
   header::after {
@@ -362,6 +361,7 @@ header {
     content: "";
     display: table; }
   header p {
+    max-width: 800px;
     text-align: center;
     margin: 0 auto;
     padding: 0 1rem; }
@@ -419,20 +419,21 @@ h1 {
   color: #799299; }
   @media screen and (min-width: 40em) {
     h1 {
-      font-size: 4.4em; } }
+      font-size: 5.5em; } }
 
 h2 {
   font-family: "Merriweather", serif;
-  font-size: 3em;
+  font-size: 2.4em;
   font-weight: 400;
-  line-height: 1em;
-  margin-bottom: 0.9em;
+  line-height: 1.3em;
+  margin-bottom: 0.2em;
   padding: 0 .5em;
   text-align: center;
   color: #799299; }
   @media screen and (min-width: 40em) {
     h2 {
-      font-size: 4.2em; } }
+      font-size: 4em;
+      line-height: 1.4em; } }
 
 code {
   background: #F7F7F7;
@@ -448,7 +449,7 @@ h3 {
   font-family: "Lusitana", serif;
   font-size: 3.2em;
   font-weight: 700;
-  line-height: 1.3em;
+  line-height: 1.8em;
   color: #799299; }
 
 h4 {
@@ -556,23 +557,35 @@ hr {
 
 #featuredProjects {
   max-width: 800px;
-  margin: .5rem auto 2rem; }
-  #featuredProjects img {
-    width: 80px;
-    margin: 10px auto 0;
-    display: block; }
-  #featuredProjects .square {
-    width: 50px; }
-  #featuredProjects p {
-    font-size: 1.4em;
-    line-height: 1.6em;
-    text-align: center;
-    font-weight: normal;
-    color: #333;
-    padding: 0;
-    text-decoration: none; }
+  margin: 8rem auto 2rem; }
   #featuredProjects .flex-box {
     min-width: 250px; }
+    #featuredProjects .flex-box p {
+      text-align: center;
+      font-size: 1.4em;
+      line-height: 1.6em;
+      font-weight: normal;
+      color: #333;
+      padding: 0;
+      text-decoration: none; }
+    #featuredProjects .flex-box img {
+      width: 80px;
+      margin: 10px auto 0;
+      display: block; }
+    #featuredProjects .flex-box .square {
+      width: 50px; }
+  #featuredProjects .process-images {
+    margin: 2em 0;
+    height: 150px;
+    overflow: hidden; }
+    #featuredProjects .process-images img {
+      width: 30%;
+      float: left;
+      margin: 0 2%; }
+    #featuredProjects .process-images a:first-of-type img {
+      margin: 0 2% 0 0; }
+    #featuredProjects .process-images a:last-of-type img {
+      margin: 0 0 0 2%; }
 
 #process {
   max-width: 800px;
