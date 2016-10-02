@@ -6,9 +6,11 @@ $dark-gray: #333 !default;
 $large-screen: 53.75em !default;
 $base-font-color: $dark-gray !default;
 $white: #ffffff;
+$action-color-light: #EBB1C3;
 $action-color: #CC3B6A;
-$action-color-darker: #992C50;
+$action-color-darker: #799299;
 $accent-color: #799299;
+$accent-color-light: #c9d3d6;
 
 $base-line-height: 1.5em !default;
 $base-spacing: 1.5em !default;
@@ -50,12 +52,6 @@ $flex-box-top-colors:
   #CCC,
   #F6C05C;
 
-
-$footer-background: desaturate(darken($accent-color, 20%), 30%);
-$footer-color: white;
-$footer-link-color: $footer-color;
-$footer-disclaimer-color: transparentize($footer-color, 0.6);
-
 @import "bourbon/bourbon";
 @import "neat/neat";
 @import "buttons";
@@ -82,7 +78,6 @@ section {
   margin: 0 auto;
   padding: 2rem;
 }
-#svg-bg { margin-top: 10rem; }
 header {
   max-width: 800px;
   margin: 3rem auto;
@@ -97,68 +92,11 @@ header {
 .social-media {
   @include clearfix;
   width: 190.4px;
-  margin: 0 auto 1em;
-
-  ul {
-    width: 215px;
-    list-style-type: none;
-    margin: 2.5em auto;
-    padding: 0;
-    display: block;
-    @include clearfix;
-  }
-  li {
-    width: 43px;
-    height: 52px;
-    padding: 14px 1px 0 9px;
-    float: left;
-    background: url("../../images/inactiveHex.png") no-repeat center top;
-    background-size: 44px;
-    .fa { font-size: 2.6em; }
-  }
-  .activeHex {
-    background: url("../../images/activeHex.png") no-repeat center top;
-    background-size: 44px;
-    &:hover .fa { color: $action-color; }
-  }
+  margin: 2em auto 0;
 }
 #primary {
-  .hexBG{
-    height: 300px;
-    background: url("../../images/hexagons.png") no-repeat center bottom;
-    background-size: cover;
-    background-clip: content-box;
-    margin-top: 50px;
-  }
-  #hex-image {
-    max-width: 96px;
-    padding-top: 4.5rem;
-  }
+  #svg-bg { margin-top: 6rem; }
 }
-#secondary {
-  .hexBG{
-    height: 250px;
-    background: url("../../images/sub-hexagons.png") no-repeat center bottom;
-    background-size: cover;
-    background-clip: content-box;
-    margin-top: 60px;
-  }
-  #hex-image {
-    max-width: 65px;
-    padding-top: 17rem;
-  }
-}
-.hexBG{
-  width: 100%;
-  position: absolute;
-  top: 0;
-  z-index: -1;
-}
-#hex-image {
-  margin: 0 auto;
-  display: block;
-}
-.portfolio #hex-image { padding-top: 15.5rem !important; }
 
 
 // Typography //
@@ -179,10 +117,11 @@ p {
   line-height: $base-line-height;
 }
 
-a {
+a:link, a:active, a:visited {
   color: $action-color;
   text-decoration: none;
 }
+a:hover { color: $action-color-darker; }
 
 .type {
   border-bottom: 1px solid;
@@ -200,7 +139,7 @@ h1 {
   font-family: $serif;
   font-size: 3.4em;
   font-weight: 700;
-  margin-bottom: .2em;
+  margin-bottom: .5em;
   padding: 0 1em;
   text-align: center;
   color: $accent-color;
@@ -282,16 +221,6 @@ hr {
   position: fixed;
   top: 0;
 
-  // In Progress
-  .in-progress {
-    width: 100%;
-    background-color: $white;
-    border-bottom: 2px solid $action-color;
-    font-size: 1.4rem;
-    text-align: center;
-    padding: 1rem;
-  }
-
   // Mobile view
   .centered-navigation-mobile-menu {
     color: $action-color;
@@ -303,7 +232,6 @@ hr {
     font-size: 1.8em;
 
     @include media ($horizontal-bar-mode) { display: none; }
-    &:focus, &:hover { color: $base-font-color; }
   }
 
   // Nav menu
@@ -352,8 +280,6 @@ hr {
       outline: none;
       text-decoration: none;
       font-weight: bold;
-
-      &:focus, &:hover { color: $base-font-color; }
     }
 
     @include media($horizontal-bar-mode) {
@@ -386,22 +312,20 @@ hr {
     padding: 0;
     text-decoration: none;
   }
+  .flex-box { min-width:250px; }
 }
 
 
 // Process //
 #process {
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
 }
-
-// Project Containers //
-#project-container { margin-top: 4rem; }
 
 
 //  Resume //
 .resume {
-  h2 { margin: 8rem 0 2rem; }
+  h2 { margin: 0 0 2rem; }
   h3 { margin-top: 5rem; }
   h3, h4 { text-align: center; }
   section { margin-top: 100px; }
@@ -440,7 +364,7 @@ hr {
 
 
 // Contact //
-.about { margin-top: 100px; }
+.about { margin-top: 8em; }
 
 
 // All Projects //
@@ -504,76 +428,13 @@ hr {
 
 // Footer //
 .footer {
-  background: $footer-background;
+  background: $white;
   display: inline-block;
-  padding: $base-spacing;
+  padding: 1em 0 0;
+  border-top: 2px solid $accent-color-light;
   width: 100%;
   margin: 30px 0 0;
-
-  ul {
-    line-height: 1.5em;
-    margin: 0 0 1em 0;
-    padding: 0;
-
-    @include media($large-screen) {
-      float: left;
-      line-height: 1.8em;
-      margin-bottom: 0;
-      margin-left: 1em;
-    }
-  }
-
-  ul li {
-    list-style: none;
-    padding-right: 2em;
-
-    @include media($large-screen) {
-      display: inline;
-      text-align: left;
-    }
-  }
-
-  ul li a {
-    color: $footer-link-color;
-    text-decoration: none;
-
-    &:focus,
-    &:hover {
-      color: transparentize($footer-color, 0);
-    }
-  }
-
-  .footer-secondary-links {
-    ul.footer-social {
-      margin: 1em 0 0 0;
-
-      @include media($large-screen) {
-        float: right;
-        margin-top: 0;
-      }
-
-      li {
-        float: left;
-        font-size: 1em;
-        line-height: 0;
-        margin: 0;
-        padding-right: 2em;
-
-        &:last-child {
-          padding-right: 0;
-        }
-      }
-
-      img {
-        height: 1.6em;
-        opacity: 0.7;
-        padding: 1px;
-
-        &:focus,
-        &:hover {
-          opacity: 1;
-        }
-      }
-    }
-  }
+  text-align: center;
+  font-size: 1.4em;
+  .social-media { margin-top: .5em; }
 }
