@@ -1,10 +1,5 @@
-// Buttons variables
-
 $button-stroke: inset 0 0 0 2px;
 
-// Buttons
-
-// scss-lint:disable PropertyCount
 .button-wrapper {
   padding: .5em 0 !important;
   margin-bottom: 40px;
@@ -15,11 +10,7 @@ $button-stroke: inset 0 0 0 2px;
 .basic-button-primary,
 .basic-button:visited,
 .basic-button-primary:visited,
-button,
-[type="button"],
-[type="submit"],
-[type="reset"],
-[type="image"] {
+button, [type="button"], [type="submit"], [type="reset"], [type="image"] {
   @include margin(0.5em 0.5em 0.5em null);
   -webkit-font-smoothing: antialiased;
   appearance: none;
@@ -42,7 +33,7 @@ button,
   &:hover,
   &:link, &:visited, &:active
   &.basic-button-hover {
-    background-color: $action-color-darker;
+    background-color: $action-color-light;
     border-bottom: 0;
     outline: none;
     text-decoration: none;
@@ -50,34 +41,37 @@ button,
 
   &:focus,
   &.basic-button-focus {
-    box-shadow: $action-color;
+    box-shadow: $action-color-light;
   }
 
   &:active,
   &.basic-button-active {
-    background-color: $action-color-darker;
+    background-color: $action-color-light;
   }
 
   &.basic-button-outline {
     background-color: $white;
     box-shadow: $button-stroke $action-color;
-    color: $action-color !important;
+    color: $action-color;
+    -webkit-transition: all .5s; /* Safari */
+    transition: all .5s;
 
     &:hover,
     &.basic-button-hover {
-      box-shadow: $button-stroke $action-color-darker;
-      color: $action-color-darker;
+      background-color: $action-color;
+      box-shadow: $button-stroke $action-color;
+      color: $white;
     }
 
     &:active,
     &.basic-button-active {
-      box-shadow: $button-stroke $action-color-darker;
-      color: $action-color-darker;
+      box-shadow: $button-stroke $action-color;
+      color: $action-color;
     }
 
     &:focus,
     &.basic-button-focus {
-      box-shadow: $button-stroke $action-color-darker, $action-color;
+      box-shadow: $button-stroke $action-color-light, $action-color-light;
     }
   }
 
@@ -102,7 +96,6 @@ button,
     display: inline-block;
   }
 }
-.basic-button a, .basic-button span{ color: $white !important; }
 
 [type='submit']:disabled,
 .basic-button-disabled {
@@ -121,7 +114,7 @@ button,
     color: $dark-gray;
   }
 }
-
+/*
 .button-group {
   $base-border-radius: 10px !default;
   $base-font-size: 1em !default;
@@ -172,4 +165,4 @@ button,
   :first-child .button-group-item, :first-child input:checked + .button-group-item {
     border-right: none;
   }
-}
+}*/
