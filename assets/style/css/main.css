@@ -377,6 +377,9 @@ header {
 #primary #svg-bg {
   margin-top: 4rem; }
 
+#secondary #svg-bg {
+  margin-top: -10px; }
+
 h1, h2, h3, p {
   margin: 0; }
 
@@ -637,10 +640,8 @@ hr {
 
 .resume h3, .resume h4 {
   text-align: center; }
-.resume section {
-  margin-top: 60px; }
 .resume .button-wrapper {
-  margin: 0 0 20px; }
+  margin: 6em 0 3em; }
 .resume .flex-boxes {
   margin-top: 2em; }
 .resume .flex-box h3 {
@@ -651,17 +652,20 @@ hr {
     margin: 0 auto;
     display: block; }
 
-.about {
-  margin-top: 8em; }
+.info #project-container {
+  padding-top: 8em; }
 
-.projects {
-  max-width: 760px;
-  margin-top: 60px; }
-  .projects .project {
-    background: none;
-    padding: 1rem 0; }
-    .projects .project a {
-      color: #333; }
+@media screen and (min-width: 53.75em) {
+  .exygy ul.navigation-menu, .ideo ul.navigation-menu {
+    width: 570px; } }
+
+.projects .project {
+  max-width: 800px;
+  margin: 0 auto;
+  background: none;
+  padding: 1rem 0; }
+.projects section {
+  padding-top: 8em; }
 
 .flex-boxes {
   align-items: stretch;

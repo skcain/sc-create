@@ -100,6 +100,9 @@ header {
 #primary {
   #svg-bg { margin-top: 4rem; }
 }
+#secondary {
+  #svg-bg { margin-top: -10px; }
+}
 
 
 // Typography //
@@ -414,8 +417,7 @@ hr {
 //  Resume //
 .resume {
   h3, h4 { text-align: center; }
-  section { margin-top: 60px; }
-  .button-wrapper { margin: 0 0 20px; }
+  .button-wrapper { margin: 6em 0 3em; }
   .flex-boxes { margin-top: 2em; }
   .flex-box { h3 { margin-top: 0; } }
   .experience {
@@ -428,19 +430,29 @@ hr {
 }
 
 
-// Contact //
-.about { margin-top: 8em; }
+// Info //
+.info #project-container { padding-top: 8em; }
+
+
+// Exygy //
+.exygy, .ideo {
+  ul.navigation-menu {
+    @include media ($horizontal-bar-mode) {
+      width: 570px;
+    }
+  }
+}
 
 
 // All Projects //
 .projects {
-  max-width: 760px;
-  margin-top: 60px;
   .project {
+    max-width: 800px;
+    margin: 0 auto;
     background: none;
     padding: 1rem 0;
-    a { color: $dark-gray; }
   }
+  section { padding-top: 8em; }
 }
 
 .flex-boxes {
