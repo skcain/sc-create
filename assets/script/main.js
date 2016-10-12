@@ -1,7 +1,12 @@
 var s;
 function menuToggle(e){
-  $("#js-centered-navigation-menu").toggleClass("show");
-  $("#nav-open, #nav-close").toggle()
+  if( e == "open"){
+
+  }else if( e == "close" ){
+
+  }
+  $("#js-navigation-menu").toggleClass("show");
+  $("#nav-open, #nav-close").toggle();
 }
 function dynamicHex(pageType) {
       s = Snap("#svg-bg");
@@ -68,13 +73,31 @@ function dynamicHex(pageType) {
       }
   return s;
 }
-$(window).on("load resize",function(e) {
-  $("#js-centered-navigation-menu").removeClass("show");
-  $("#nav-close").hide();
-});
-$( document ).ready(function() {
+/*$(window).on("load resize",function(e) {
+  menuToggle("close");
+});*/
+$( document ).ready(function(e) {
   if ($("#svg-bg").length>0) {
     var pageType = $("body").attr("id");
     dynamicHex(pageType);
   }
+});
+
+$(window).on("load resize",function(e) {
+  var menuToggle = $("#js-navigation-mobile-menu").unbind();
+  $("#js-navigation-menu").removeClass("show");
+
+  menuToggle.on("click", function(e) {
+    e.preventDefault();
+    if($("#js-navigation-menu").is(":visible")){
+      $("#js-navigation-mobile-menu").html("Open Menu");
+    }else {
+      $("#js-navigation-mobile-menu").html("Close Menu");
+    }
+    $("#js-navigation-menu").slideToggle(function(){
+      if($("#js-navigation-menu").is(":hidden")) {
+        $("#js-navigation-menu").removeAttr("style");
+      }
+    });
+  });
 });
