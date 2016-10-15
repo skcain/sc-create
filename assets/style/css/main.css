@@ -380,6 +380,9 @@ header {
 #secondary #svg-bg {
   margin-top: -10px; }
 
+.hide {
+  display: none; }
+
 h1, h2, h3, p {
   margin: 0; }
 
