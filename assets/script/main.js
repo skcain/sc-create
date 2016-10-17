@@ -1,13 +1,4 @@
 var s;
-function menuToggle(e){
-  if( e == "open"){
-
-  }else if( e == "close" ){
-
-  }
-  $("#js-navigation-menu").toggleClass("show");
-  $("#nav-open, #nav-close").toggle();
-}
 function dynamicHex(pageType) {
       s = Snap("#svg-bg");
   var hexGroup = s.select("#hex-group"),
@@ -73,9 +64,10 @@ function dynamicHex(pageType) {
       }
   return s;
 }
-/*$(window).on("load resize",function(e) {
-  menuToggle("close");
-});*/
+function readMore(){
+  e.preventDefault();
+  $(".hide").slideToggle();
+}
 $( document ).ready(function(e) {
   if ($("#svg-bg").length>0) {
     var pageType = $("body").attr("id");
