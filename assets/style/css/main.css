@@ -380,6 +380,9 @@ header {
 #secondary #svg-bg {
   margin-top: -10px; }
 
+#experience h4, p, #featuredProjects h3 {
+  text-align: center; }
+
 .hide {
   display: none; }
 
@@ -639,6 +642,8 @@ hr {
 #process {
   max-width: 800px;
   margin: 0 auto; }
+  #process p {
+    text-align: left; }
 
 .resume h3, .resume h4 {
   text-align: center; }
@@ -660,8 +665,6 @@ hr {
 @media screen and (min-width: 53.75em) {
   .exygy ul.navigation-menu, .ideo ul.navigation-menu {
     width: 708px; } }
-.exygy #experience h4, .exygy p, .exygy #featuredProjects h3, .ideo #experience h4, .ideo p, .ideo #featuredProjects h3 {
-  text-align: center; }
 
 .projects .project {
   max-width: 800px;

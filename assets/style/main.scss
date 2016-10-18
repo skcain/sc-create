@@ -103,6 +103,7 @@ header {
 #secondary {
   #svg-bg { margin-top: -10px; }
 }
+#experience h4, p, #featuredProjects h3 { text-align: center; }
 .hide { display: none; }
 
 // Typography //
@@ -410,6 +411,7 @@ hr {
 #process {
   max-width: 800px;
   margin: 0 auto;
+  p{ text-align: left; }
 }
 
 
@@ -440,7 +442,6 @@ hr {
       width: 708px;
     }
   }
-  #experience h4, p, #featuredProjects h3 { text-align: center; }
 }
 
 
