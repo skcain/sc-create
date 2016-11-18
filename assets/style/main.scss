@@ -446,6 +446,15 @@ small { font-size: 1.4em; }
 
 
 // All Projects //
+.phoneMocks {
+  width: 100%;
+
+  img {
+    width: 30%;
+    margin: 0 1.5%;
+    float: left;
+  }
+}
 .process {
   margin: 2em 0;
 

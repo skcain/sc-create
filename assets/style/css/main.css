@@ -667,6 +667,13 @@ small {
   .exygy ul.navigation-menu, .ideo ul.navigation-menu {
     width: 708px; } }
 
+.phoneMocks {
+  width: 100%; }
+  .phoneMocks img {
+    width: 30%;
+    margin: 0 1.5%;
+    float: left; }
+
 .process {
   margin: 2em 0; }
   .process h4 {
