@@ -103,7 +103,7 @@ header {
 #secondary {
   #svg-bg { margin-top: -10px; }
 }
-#experience h4, p, #featuredProjects h3 { text-align: center; }
+#experience h4, #featuredProjects h3 { text-align: center; }
 .hide { display: none; }
 
 // Typography //
@@ -112,6 +112,7 @@ h1, h2, h3, p {
 }
 
 hr {
+
   border-bottom: 1px solid $light-gray;
   border-left: 0;
   border-right: 0;
@@ -202,11 +203,10 @@ p, li {
 p { line-height: 1.6em; }
 small { font-size: 1.4em; }
 .centered { text-align: center; }
-
-hr {
-  width: 3em;
+.space {
+  width: 100%;
+  height: 5em;
 }
-
 
 .navigation {
   background-color: $white;
@@ -446,6 +446,31 @@ hr {
 
 
 // All Projects //
+.process {
+  margin: 2em 0;
+
+  h4 {
+    width:100%;
+    margin-top: 0;
+  }
+  ul {
+    max-width: 480px;
+    float: left;
+  }
+  .imgCont {
+    width: 250px;
+    height: 200px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 auto 1em;
+
+    img {
+      display: block;
+      width: 100%;
+      margin-left: 1em;
+    }
+  }
+}
 .projects {
   .project {
     max-width: 800px;
