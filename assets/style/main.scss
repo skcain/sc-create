@@ -193,6 +193,7 @@ h4 {
 p, li {
   font-family: $serif-2;
   font-size: 1.8em;
+  line-height: 1.6em;
   margin: 0 auto .5em;
 
   span {
@@ -454,6 +455,10 @@ small { font-size: 1.4em; }
     margin: 0 1.5%;
     float: left;
   }
+}
+.laptopMock {
+  width: 100%;
+  img { width: 100%; }
 }
 .process {
   margin: 2em 0;

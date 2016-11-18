@@ -462,6 +462,7 @@ h4 {
 p, li {
   font-family: "Merriweather", serif;
   font-size: 1.8em;
+  line-height: 1.6em;
   margin: 0 auto .5em; }
   p span, li span {
     font-family: "Merriweather Sans", sans-serif;
@@ -673,6 +674,11 @@ small {
     width: 30%;
     margin: 0 1.5%;
     float: left; }
+
+.laptopMock {
+  width: 100%; }
+  .laptopMock img {
+    width: 100%; }
 
 .process {
   margin: 2em 0; }
